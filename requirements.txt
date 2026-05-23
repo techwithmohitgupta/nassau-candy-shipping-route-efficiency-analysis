@@ -1,0 +1,11 @@
+Factory-to-Customer Shipping Route Efficiency Analysis for Nassau Candy Distributor
+
+✔ Data Loading and Inspection
+✔ Data Cleaning Pipeline
+✔ Feature Engineering
+✔ Route Aggregation
+✔ Benchmarking
+✔ Bottleneck Analysis
+✔ Ship Mode Analysis
+✔ Insights & Recommendations
+✔ Dashboard Data

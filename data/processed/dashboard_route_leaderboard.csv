@@ -1,0 +1,197 @@
+Route_State,Total_Shipments,Avg_Lead_Time,Lead_Time_Std,Min_Lead_Time,Max_Lead_Time,Efficiency_Rank,Efficiency_Score,Performance_Category
+Lot's O' Nuts → Alabama,34,4.59,1.84,1,7,79,34.43,Poor
+Lot's O' Nuts → Alberta,16,3.5,1.32,2,7,21,50,Average
+Lot's O' Nuts → Arizona,111,3.86,2.03,0,7,38,44.86,Average
+Lot's O' Nuts → Arkansas,31,4.19,1.54,0,7,60,40.14,Average
+Lot's O' Nuts → British Columbia,18,5,1.53,2,7,86,28.57,Poor
+Lot's O' Nuts → California,1125,3.85,1.88,0,7,37,45,Average
+Lot's O' Nuts → Colorado,103,3.77,1.86,0,7,34,46.14,Average
+Lot's O' Nuts → Connecticut,47,3.57,2.08,0,7,25,49,Average
+Lot's O' Nuts → Delaware,43,3.7,1.63,0,7,29,47.14,Average
+Lot's O' Nuts → District Of Columbia,8,4,1.31,2,6,47,42.86,Average
+Lot's O' Nuts → Florida,209,3.96,1.91,0,7,45,43.43,Average
+Lot's O' Nuts → Georgia,110,4.2,1.91,0,7,61,40,Poor
+Lot's O' Nuts → Idaho,14,4.5,2.07,1,7,74,35.71,Poor
+Lot's O' Nuts → Illinois,267,3.94,1.76,0,7,44,43.71,Average
+Lot's O' Nuts → Indiana,90,3.92,1.5,0,7,43,44,Average
+Lot's O' Nuts → Iowa,16,4.56,1.86,2,7,76,34.86,Poor
+Lot's O' Nuts → Kansas,15,4,2.1,1,7,47,42.86,Average
+Lot's O' Nuts → Kentucky,77,4.06,1.59,0,7,51,42,Average
+Lot's O' Nuts → Louisiana,24,4.12,1.83,1,7,55,41.14,Average
+Lot's O' Nuts → Maine,6,5.17,1.47,3,7,88,26.14,Poor
+Lot's O' Nuts → Manitoba,2,3,0,3,3,9,57.14,Average
+Lot's O' Nuts → Maryland,60,4.03,1.89,0,7,49,42.43,Average
+Lot's O' Nuts → Massachusetts,76,3.82,1.76,0,7,35,45.43,Average
+Lot's O' Nuts → Michigan,147,4.15,1.96,0,7,58,40.71,Average
+Lot's O' Nuts → Minnesota,43,4.51,1.67,1,7,75,35.57,Poor
+Lot's O' Nuts → Mississippi,30,4.3,1.82,1,7,65,38.57,Poor
+Lot's O' Nuts → Missouri,36,3.83,1.65,0,7,36,45.29,Average
+Lot's O' Nuts → Montana,8,5.5,1.85,3,7,90,21.43,Poor
+Lot's O' Nuts → Nebraska,23,4.09,1.88,0,7,53,41.57,Average
+Lot's O' Nuts → Nevada,24,3.96,1.78,0,7,45,43.43,Average
+Lot's O' Nuts → New Brunswick,4,5.5,1,5,7,90,21.43,Poor
+Lot's O' Nuts → New Hampshire,13,4.46,1.39,2,7,73,36.29,Poor
+Lot's O' Nuts → New Jersey,65,4.45,1.56,1,7,72,36.43,Poor
+Lot's O' Nuts → New Mexico,18,4.67,1.57,2,7,82,33.29,Poor
+Lot's O' Nuts → New York,645,4,1.91,0,7,47,42.86,Average
+Lot's O' Nuts → Newfoundland And Labrador,6,5.67,1.63,3,7,92,19,Poor
+Lot's O' Nuts → North Carolina,143,4.15,2.06,0,7,58,40.71,Average
+Lot's O' Nuts → North Dakota,5,4.2,1.79,2,7,61,40,Poor
+Lot's O' Nuts → Ohio,262,3.46,1.96,0,7,20,50.57,Average
+Lot's O' Nuts → Oklahoma,41,4.22,1.93,1,7,62,39.71,Poor
+Lot's O' Nuts → Ontario,28,3.86,1.63,1,7,38,44.86,Average
+Lot's O' Nuts → Oregon,77,4.32,1.77,1,7,66,38.29,Poor
+Lot's O' Nuts → Pennsylvania,331,4.17,1.78,0,7,59,40.43,Average
+Lot's O' Nuts → Prince Edward Island,6,5.33,1.37,3,7,89,23.86,Poor
+Lot's O' Nuts → Quebec,24,3.25,1.57,0,7,11,53.57,Average
+Lot's O' Nuts → Rhode Island,30,3.13,1.57,1,7,10,55.29,Average
+Lot's O' Nuts → South Carolina,21,3.52,1.57,1,6,22,49.71,Average
+Lot's O' Nuts → South Dakota,9,4.56,1.81,2,7,76,34.86,Poor
+Lot's O' Nuts → Tennessee,109,4.13,1.63,0,7,56,41,Average
+Lot's O' Nuts → Texas,569,4.14,1.86,0,7,57,40.86,Average
+Lot's O' Nuts → Utah,29,3.83,1.51,1,7,36,45.29,Average
+Lot's O' Nuts → Vermont,5,4.6,1.14,3,6,80,34.29,Poor
+Lot's O' Nuts → Virginia,109,4.05,1.79,0,7,50,42.14,Average
+Lot's O' Nuts → Washington,269,4.02,1.87,0,7,48,42.57,Average
+Lot's O' Nuts → West Virginia,2,1.5,2.12,0,3,3,78.57,High
+Lot's O' Nuts → Wisconsin,58,4.02,2.04,0,7,48,42.57,Average
+Lot's O' Nuts → Wyoming,1,3,,3,3,9,57.14,Average
+Secret Factory → Alabama,3,3,0,3,3,9,57.14,Average
+Secret Factory → Alberta,2,5,2.83,3,7,86,28.57,Poor
+Secret Factory → Arizona,5,3.4,1.82,1,6,17,51.43,Average
+Secret Factory → Arkansas,2,4,0,4,4,47,42.86,Average
+Secret Factory → California,31,3.94,2.05,0,7,44,43.71,Average
+Secret Factory → Colorado,7,2.14,1.35,0,4,5,69.43,Average
+Secret Factory → Connecticut,1,3,,3,3,9,57.14,Average
+Secret Factory → Delaware,1,5,,5,5,86,28.57,Poor
+Secret Factory → Florida,7,3.86,1.21,3,6,38,44.86,Average
+Secret Factory → Georgia,7,3.86,1.35,2,6,38,44.86,Average
+Secret Factory → Illinois,13,3.31,2.18,0,7,14,52.71,Average
+Secret Factory → Indiana,4,4.5,2.08,2,7,74,35.71,Poor
+Secret Factory → Kentucky,2,3,1.41,2,4,9,57.14,Average
+Secret Factory → Louisiana,2,5.5,0.71,5,6,90,21.43,Poor
+Secret Factory → Maryland,3,6,1,5,7,94,14.29,Poor
+Secret Factory → Massachusetts,2,4.5,2.12,3,6,74,35.71,Poor
+Secret Factory → Michigan,5,4.4,2.3,1,6,69,37.14,Poor
+Secret Factory → Minnesota,1,4,,4,4,47,42.86,Average
+Secret Factory → Mississippi,1,6,,6,6,94,14.29,Poor
+Secret Factory → Nebraska,1,3,,3,3,9,57.14,Average
+Secret Factory → Nevada,2,3.5,0.71,3,4,21,50,Average
+Secret Factory → New Hampshire,1,6,,6,6,94,14.29,Poor
+Secret Factory → New Jersey,2,4.5,0.71,4,5,74,35.71,Poor
+Secret Factory → New Mexico,2,2,1.41,1,3,4,71.43,High
+Secret Factory → New York,24,4.38,2.12,1,7,68,37.43,Poor
+Secret Factory → North Carolina,4,4,3.16,0,7,47,42.86,Average
+Secret Factory → Ohio,13,3.69,1.84,1,7,28,47.29,Average
+Secret Factory → Oregon,2,2.5,2.12,1,4,6,64.29,Average
+Secret Factory → Pennsylvania,19,3.53,1.54,1,6,23,49.57,Average
+Secret Factory → Quebec,2,3.5,0.71,3,4,21,50,Average
+Secret Factory → Rhode Island,3,3.33,2.08,1,5,15,52.43,Average
+Secret Factory → South Carolina,1,3,,3,3,9,57.14,Average
+Secret Factory → Tennessee,3,3.67,1.15,3,5,27,47.57,Average
+Secret Factory → Texas,16,3.56,1.79,1,7,24,49.14,Average
+Secret Factory → Utah,1,4,,4,4,47,42.86,Average
+Secret Factory → Vermont,1,4,,4,4,47,42.86,Average
+Secret Factory → Virginia,5,2.6,0.55,2,3,7,62.86,Average
+Secret Factory → Washington,11,3.73,2.24,1,7,31,46.71,Average
+Secret Factory → Wisconsin,5,4,1.87,2,7,47,42.86,Average
+Sugar Shack → Arizona,1,3,,3,3,9,57.14,Average
+Sugar Shack → California,1,3,,3,3,9,57.14,Average
+Sugar Shack → Connecticut,1,5,,5,5,86,28.57,Poor
+Sugar Shack → Delaware,1,6,,6,6,94,14.29,Poor
+Sugar Shack → Florida,3,5.67,0.58,5,6,92,19,Poor
+Sugar Shack → Illinois,2,3,2.83,1,5,9,57.14,Average
+Sugar Shack → Michigan,3,3.67,3.06,1,7,27,47.57,Average
+Sugar Shack → New Jersey,1,5,,5,5,86,28.57,Poor
+Sugar Shack → New York,9,3.89,1.83,1,7,41,44.43,Average
+Sugar Shack → Ohio,2,3,4.24,0,6,9,57.14,Average
+Sugar Shack → Pennsylvania,3,5.67,0.58,5,6,92,19,Poor
+Sugar Shack → Rhode Island,1,6,,6,6,94,14.29,Poor
+Sugar Shack → Tennessee,1,2,,2,2,4,71.43,High
+Sugar Shack → Texas,3,4,2,2,6,47,42.86,Average
+Sugar Shack → Washington,1,4,,4,4,47,42.86,Average
+The Other Factory → Alabama,2,5,2.83,3,7,86,28.57,Poor
+The Other Factory → Arizona,2,2,0,2,2,4,71.43,High
+The Other Factory → California,21,3.71,1.9,1,7,30,47,Average
+The Other Factory → Colorado,2,3.5,0.71,3,4,21,50,Average
+The Other Factory → Connecticut,2,4,0,4,4,47,42.86,Average
+The Other Factory → Delaware,2,4.5,0.71,4,5,74,35.71,Poor
+The Other Factory → Florida,3,2.67,0.58,2,3,8,61.86,Average
+The Other Factory → Georgia,2,5.5,0.71,5,6,90,21.43,Poor
+The Other Factory → Indiana,1,5,,5,5,86,28.57,Poor
+The Other Factory → Kentucky,2,1,1.41,0,2,2,85.71,High
+The Other Factory → Louisiana,1,4,,4,4,47,42.86,Average
+The Other Factory → Maryland,1,3,,3,3,9,57.14,Average
+The Other Factory → Massachusetts,3,4,1.73,2,5,47,42.86,Average
+The Other Factory → Missouri,1,7,,7,7,96,0,
+The Other Factory → Nevada,1,2,,2,2,4,71.43,High
+The Other Factory → New Hampshire,2,2,0,2,2,4,71.43,High
+The Other Factory → New Jersey,3,6.33,1.15,5,7,95,9.57,Poor
+The Other Factory → New York,14,3.86,2.03,0,7,38,44.86,Average
+The Other Factory → North Carolina,1,0,,0,0,1,100,High
+The Other Factory → Ohio,3,4.33,1.15,3,5,67,38.14,Poor
+The Other Factory → Oregon,2,1.5,0.71,1,2,3,78.57,High
+The Other Factory → Pennsylvania,7,3.71,2.56,1,7,30,47,Average
+The Other Factory → Rhode Island,1,7,,7,7,96,0,
+The Other Factory → South Carolina,1,3,,3,3,9,57.14,Average
+The Other Factory → Tennessee,3,4.33,0.58,4,5,67,38.14,Poor
+The Other Factory → Texas,9,3.33,2,1,7,15,52.43,Average
+The Other Factory → Virginia,4,4,2.94,1,7,47,42.86,Average
+The Other Factory → Washington,4,5.75,0.96,5,7,93,17.86,Poor
+Wicked Choccy's → Alabama,22,3.64,1.87,1,7,26,48,Average
+Wicked Choccy's → Alberta,8,4,1.93,2,7,47,42.86,Average
+Wicked Choccy's → Arizona,105,4,1.91,0,7,47,42.86,Average
+Wicked Choccy's → Arkansas,27,4.3,1.94,1,7,65,38.57,Poor
+Wicked Choccy's → British Columbia,4,3.75,0.96,3,5,33,46.43,Average
+Wicked Choccy's → California,823,4.09,1.87,0,7,53,41.57,Average
+Wicked Choccy's → Colorado,70,3.87,1.9,0,7,39,44.71,Average
+Wicked Choccy's → Connecticut,31,3.29,2.27,0,7,13,53,Average
+Wicked Choccy's → Delaware,49,4.24,1.85,1,7,63,39.43,Poor
+Wicked Choccy's → District Of Columbia,2,5,2.83,3,7,86,28.57,Poor
+Wicked Choccy's → Florida,161,4.22,1.97,0,7,62,39.71,Poor
+Wicked Choccy's → Georgia,65,3.85,2.02,0,7,37,45,Average
+Wicked Choccy's → Idaho,7,5.14,2.12,2,7,87,26.57,Poor
+Wicked Choccy's → Illinois,210,4.12,2.02,0,7,55,41.14,Average
+Wicked Choccy's → Indiana,54,4.7,1.76,1,7,83,32.86,Poor
+Wicked Choccy's → Iowa,14,3.86,1.75,0,6,38,44.86,Average
+Wicked Choccy's → Kansas,9,4.44,2.3,1,7,71,36.57,Poor
+Wicked Choccy's → Kentucky,58,4.22,1.76,1,7,62,39.71,Poor
+Wicked Choccy's → Louisiana,15,3.27,1.62,1,7,12,53.29,Average
+Wicked Choccy's → Maine,2,3,0,3,3,9,57.14,Average
+Wicked Choccy's → Manitoba,10,3.9,1.91,1,7,42,44.29,Average
+Wicked Choccy's → Maryland,41,4.05,1.88,1,7,50,42.14,Average
+Wicked Choccy's → Massachusetts,54,4.3,1.67,1,7,65,38.57,Poor
+Wicked Choccy's → Michigan,100,4.43,1.88,0,7,70,36.71,Poor
+Wicked Choccy's → Minnesota,45,3.98,1.9,0,7,46,43.14,Average
+Wicked Choccy's → Mississippi,22,4.64,1.84,0,7,81,33.71,Poor
+Wicked Choccy's → Missouri,29,3.41,1.38,2,7,18,51.29,Average
+Wicked Choccy's → Montana,7,3.57,1.9,1,6,25,49,Average
+Wicked Choccy's → Nebraska,14,3.36,1.28,1,5,16,52,Average
+Wicked Choccy's → Nevada,12,4.08,1.31,1,6,52,41.71,Average
+Wicked Choccy's → New Brunswick,4,4.5,1.29,3,6,74,35.71,Poor
+Wicked Choccy's → New Hampshire,11,3.45,1.04,2,5,19,50.71,Average
+Wicked Choccy's → New Jersey,59,4.12,1.82,0,7,55,41.14,Average
+Wicked Choccy's → New Mexico,17,3.88,1.27,2,7,40,44.57,Average
+Wicked Choccy's → New York,436,3.96,1.91,0,7,45,43.43,Average
+Wicked Choccy's → North Carolina,101,4.11,1.74,0,7,54,41.29,Average
+Wicked Choccy's → North Dakota,2,3.5,2.12,2,5,21,50,Average
+Wicked Choccy's → Nova Scotia,6,4.83,1.94,2,7,84,31,Poor
+Wicked Choccy's → Ohio,189,3.71,2.01,0,7,30,47,Average
+Wicked Choccy's → Oklahoma,25,3.88,1.99,0,7,40,44.57,Average
+Wicked Choccy's → Ontario,30,4.87,1.53,3,7,85,30.43,Poor
+Wicked Choccy's → Oregon,43,4.19,1.75,1,7,60,40.14,Average
+Wicked Choccy's → Pennsylvania,227,4.08,1.89,0,7,52,41.71,Average
+Wicked Choccy's → Prince Edward Island,4,5.5,1.73,4,7,90,21.43,Poor
+Wicked Choccy's → Quebec,24,4.5,1.41,1,7,74,35.71,Poor
+Wicked Choccy's → Rhode Island,21,3.33,1.35,1,7,15,52.43,Average
+Wicked Choccy's → Saskatchewan,2,4.5,2.12,3,6,74,35.71,Poor
+Wicked Choccy's → South Carolina,19,4.26,1.91,0,7,64,39.14,Poor
+Wicked Choccy's → South Dakota,3,3,1.73,2,5,9,57.14,Average
+Wicked Choccy's → Tennessee,67,4.58,1.71,1,7,78,34.57,Poor
+Wicked Choccy's → Texas,388,3.96,1.91,0,7,45,43.43,Average
+Wicked Choccy's → Utah,23,3.74,1.68,1,7,32,46.57,Average
+Wicked Choccy's → Vermont,5,5.6,0.89,5,7,91,20,Poor
+Wicked Choccy's → Virginia,106,4.08,1.82,0,7,52,41.71,Average
+Wicked Choccy's → Washington,221,3.83,1.89,0,7,36,45.29,Average
+Wicked Choccy's → West Virginia,2,4,0,4,4,47,42.86,Average
+Wicked Choccy's → Wisconsin,47,4.57,1.91,0,7,77,34.71,Poor

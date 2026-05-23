@@ -1,0 +1,197 @@
+Route_State,Total_Shipments,Avg_Lead_Time,Lead_Time_Std,Min_Lead_Time,Max_Lead_Time
+Lot's O' Nuts → Alabama,34,4.59,1.84,1,7
+Lot's O' Nuts → Alberta,16,3.5,1.32,2,7
+Lot's O' Nuts → Arizona,111,3.86,2.03,0,7
+Lot's O' Nuts → Arkansas,31,4.19,1.54,0,7
+Lot's O' Nuts → British Columbia,18,5.0,1.53,2,7
+Lot's O' Nuts → California,1125,3.85,1.88,0,7
+Lot's O' Nuts → Colorado,103,3.77,1.86,0,7
+Lot's O' Nuts → Connecticut,47,3.57,2.08,0,7
+Lot's O' Nuts → Delaware,43,3.7,1.63,0,7
+Lot's O' Nuts → District Of Columbia,8,4.0,1.31,2,6
+Lot's O' Nuts → Florida,209,3.96,1.91,0,7
+Lot's O' Nuts → Georgia,110,4.2,1.91,0,7
+Lot's O' Nuts → Idaho,14,4.5,2.07,1,7
+Lot's O' Nuts → Illinois,267,3.94,1.76,0,7
+Lot's O' Nuts → Indiana,90,3.92,1.5,0,7
+Lot's O' Nuts → Iowa,16,4.56,1.86,2,7
+Lot's O' Nuts → Kansas,15,4.0,2.1,1,7
+Lot's O' Nuts → Kentucky,77,4.06,1.59,0,7
+Lot's O' Nuts → Louisiana,24,4.12,1.83,1,7
+Lot's O' Nuts → Maine,6,5.17,1.47,3,7
+Lot's O' Nuts → Manitoba,2,3.0,0.0,3,3
+Lot's O' Nuts → Maryland,60,4.03,1.89,0,7
+Lot's O' Nuts → Massachusetts,76,3.82,1.76,0,7
+Lot's O' Nuts → Michigan,147,4.15,1.96,0,7
+Lot's O' Nuts → Minnesota,43,4.51,1.67,1,7
+Lot's O' Nuts → Mississippi,30,4.3,1.82,1,7
+Lot's O' Nuts → Missouri,36,3.83,1.65,0,7
+Lot's O' Nuts → Montana,8,5.5,1.85,3,7
+Lot's O' Nuts → Nebraska,23,4.09,1.88,0,7
+Lot's O' Nuts → Nevada,24,3.96,1.78,0,7
+Lot's O' Nuts → New Brunswick,4,5.5,1.0,5,7
+Lot's O' Nuts → New Hampshire,13,4.46,1.39,2,7
+Lot's O' Nuts → New Jersey,65,4.45,1.56,1,7
+Lot's O' Nuts → New Mexico,18,4.67,1.57,2,7
+Lot's O' Nuts → New York,645,4.0,1.91,0,7
+Lot's O' Nuts → Newfoundland And Labrador,6,5.67,1.63,3,7
+Lot's O' Nuts → North Carolina,143,4.15,2.06,0,7
+Lot's O' Nuts → North Dakota,5,4.2,1.79,2,7
+Lot's O' Nuts → Ohio,262,3.46,1.96,0,7
+Lot's O' Nuts → Oklahoma,41,4.22,1.93,1,7
+Lot's O' Nuts → Ontario,28,3.86,1.63,1,7
+Lot's O' Nuts → Oregon,77,4.32,1.77,1,7
+Lot's O' Nuts → Pennsylvania,331,4.17,1.78,0,7
+Lot's O' Nuts → Prince Edward Island,6,5.33,1.37,3,7
+Lot's O' Nuts → Quebec,24,3.25,1.57,0,7
+Lot's O' Nuts → Rhode Island,30,3.13,1.57,1,7
+Lot's O' Nuts → South Carolina,21,3.52,1.57,1,6
+Lot's O' Nuts → South Dakota,9,4.56,1.81,2,7
+Lot's O' Nuts → Tennessee,109,4.13,1.63,0,7
+Lot's O' Nuts → Texas,569,4.14,1.86,0,7
+Lot's O' Nuts → Utah,29,3.83,1.51,1,7
+Lot's O' Nuts → Vermont,5,4.6,1.14,3,6
+Lot's O' Nuts → Virginia,109,4.05,1.79,0,7
+Lot's O' Nuts → Washington,269,4.02,1.87,0,7
+Lot's O' Nuts → West Virginia,2,1.5,2.12,0,3
+Lot's O' Nuts → Wisconsin,58,4.02,2.04,0,7
+Lot's O' Nuts → Wyoming,1,3.0,,3,3
+Secret Factory → Alabama,3,3.0,0.0,3,3
+Secret Factory → Alberta,2,5.0,2.83,3,7
+Secret Factory → Arizona,5,3.4,1.82,1,6
+Secret Factory → Arkansas,2,4.0,0.0,4,4
+Secret Factory → California,31,3.94,2.05,0,7
+Secret Factory → Colorado,7,2.14,1.35,0,4
+Secret Factory → Connecticut,1,3.0,,3,3
+Secret Factory → Delaware,1,5.0,,5,5
+Secret Factory → Florida,7,3.86,1.21,3,6
+Secret Factory → Georgia,7,3.86,1.35,2,6
+Secret Factory → Illinois,13,3.31,2.18,0,7
+Secret Factory → Indiana,4,4.5,2.08,2,7
+Secret Factory → Kentucky,2,3.0,1.41,2,4
+Secret Factory → Louisiana,2,5.5,0.71,5,6
+Secret Factory → Maryland,3,6.0,1.0,5,7
+Secret Factory → Massachusetts,2,4.5,2.12,3,6
+Secret Factory → Michigan,5,4.4,2.3,1,6
+Secret Factory → Minnesota,1,4.0,,4,4
+Secret Factory → Mississippi,1,6.0,,6,6
+Secret Factory → Nebraska,1,3.0,,3,3
+Secret Factory → Nevada,2,3.5,0.71,3,4
+Secret Factory → New Hampshire,1,6.0,,6,6
+Secret Factory → New Jersey,2,4.5,0.71,4,5
+Secret Factory → New Mexico,2,2.0,1.41,1,3
+Secret Factory → New York,24,4.38,2.12,1,7
+Secret Factory → North Carolina,4,4.0,3.16,0,7
+Secret Factory → Ohio,13,3.69,1.84,1,7
+Secret Factory → Oregon,2,2.5,2.12,1,4
+Secret Factory → Pennsylvania,19,3.53,1.54,1,6
+Secret Factory → Quebec,2,3.5,0.71,3,4
+Secret Factory → Rhode Island,3,3.33,2.08,1,5
+Secret Factory → South Carolina,1,3.0,,3,3
+Secret Factory → Tennessee,3,3.67,1.15,3,5
+Secret Factory → Texas,16,3.56,1.79,1,7
+Secret Factory → Utah,1,4.0,,4,4
+Secret Factory → Vermont,1,4.0,,4,4
+Secret Factory → Virginia,5,2.6,0.55,2,3
+Secret Factory → Washington,11,3.73,2.24,1,7
+Secret Factory → Wisconsin,5,4.0,1.87,2,7
+Sugar Shack → Arizona,1,3.0,,3,3
+Sugar Shack → California,1,3.0,,3,3
+Sugar Shack → Connecticut,1,5.0,,5,5
+Sugar Shack → Delaware,1,6.0,,6,6
+Sugar Shack → Florida,3,5.67,0.58,5,6
+Sugar Shack → Illinois,2,3.0,2.83,1,5
+Sugar Shack → Michigan,3,3.67,3.06,1,7
+Sugar Shack → New Jersey,1,5.0,,5,5
+Sugar Shack → New York,9,3.89,1.83,1,7
+Sugar Shack → Ohio,2,3.0,4.24,0,6
+Sugar Shack → Pennsylvania,3,5.67,0.58,5,6
+Sugar Shack → Rhode Island,1,6.0,,6,6
+Sugar Shack → Tennessee,1,2.0,,2,2
+Sugar Shack → Texas,3,4.0,2.0,2,6
+Sugar Shack → Washington,1,4.0,,4,4
+The Other Factory → Alabama,2,5.0,2.83,3,7
+The Other Factory → Arizona,2,2.0,0.0,2,2
+The Other Factory → California,21,3.71,1.9,1,7
+The Other Factory → Colorado,2,3.5,0.71,3,4
+The Other Factory → Connecticut,2,4.0,0.0,4,4
+The Other Factory → Delaware,2,4.5,0.71,4,5
+The Other Factory → Florida,3,2.67,0.58,2,3
+The Other Factory → Georgia,2,5.5,0.71,5,6
+The Other Factory → Indiana,1,5.0,,5,5
+The Other Factory → Kentucky,2,1.0,1.41,0,2
+The Other Factory → Louisiana,1,4.0,,4,4
+The Other Factory → Maryland,1,3.0,,3,3
+The Other Factory → Massachusetts,3,4.0,1.73,2,5
+The Other Factory → Missouri,1,7.0,,7,7
+The Other Factory → Nevada,1,2.0,,2,2
+The Other Factory → New Hampshire,2,2.0,0.0,2,2
+The Other Factory → New Jersey,3,6.33,1.15,5,7
+The Other Factory → New York,14,3.86,2.03,0,7
+The Other Factory → North Carolina,1,0.0,,0,0
+The Other Factory → Ohio,3,4.33,1.15,3,5
+The Other Factory → Oregon,2,1.5,0.71,1,2
+The Other Factory → Pennsylvania,7,3.71,2.56,1,7
+The Other Factory → Rhode Island,1,7.0,,7,7
+The Other Factory → South Carolina,1,3.0,,3,3
+The Other Factory → Tennessee,3,4.33,0.58,4,5
+The Other Factory → Texas,9,3.33,2.0,1,7
+The Other Factory → Virginia,4,4.0,2.94,1,7
+The Other Factory → Washington,4,5.75,0.96,5,7
+Wicked Choccy's → Alabama,22,3.64,1.87,1,7
+Wicked Choccy's → Alberta,8,4.0,1.93,2,7
+Wicked Choccy's → Arizona,105,4.0,1.91,0,7
+Wicked Choccy's → Arkansas,27,4.3,1.94,1,7
+Wicked Choccy's → British Columbia,4,3.75,0.96,3,5
+Wicked Choccy's → California,823,4.09,1.87,0,7
+Wicked Choccy's → Colorado,70,3.87,1.9,0,7
+Wicked Choccy's → Connecticut,31,3.29,2.27,0,7
+Wicked Choccy's → Delaware,49,4.24,1.85,1,7
+Wicked Choccy's → District Of Columbia,2,5.0,2.83,3,7
+Wicked Choccy's → Florida,161,4.22,1.97,0,7
+Wicked Choccy's → Georgia,65,3.85,2.02,0,7
+Wicked Choccy's → Idaho,7,5.14,2.12,2,7
+Wicked Choccy's → Illinois,210,4.12,2.02,0,7
+Wicked Choccy's → Indiana,54,4.7,1.76,1,7
+Wicked Choccy's → Iowa,14,3.86,1.75,0,6
+Wicked Choccy's → Kansas,9,4.44,2.3,1,7
+Wicked Choccy's → Kentucky,58,4.22,1.76,1,7
+Wicked Choccy's → Louisiana,15,3.27,1.62,1,7
+Wicked Choccy's → Maine,2,3.0,0.0,3,3
+Wicked Choccy's → Manitoba,10,3.9,1.91,1,7
+Wicked Choccy's → Maryland,41,4.05,1.88,1,7
+Wicked Choccy's → Massachusetts,54,4.3,1.67,1,7
+Wicked Choccy's → Michigan,100,4.43,1.88,0,7
+Wicked Choccy's → Minnesota,45,3.98,1.9,0,7
+Wicked Choccy's → Mississippi,22,4.64,1.84,0,7
+Wicked Choccy's → Missouri,29,3.41,1.38,2,7
+Wicked Choccy's → Montana,7,3.57,1.9,1,6
+Wicked Choccy's → Nebraska,14,3.36,1.28,1,5
+Wicked Choccy's → Nevada,12,4.08,1.31,1,6
+Wicked Choccy's → New Brunswick,4,4.5,1.29,3,6
+Wicked Choccy's → New Hampshire,11,3.45,1.04,2,5
+Wicked Choccy's → New Jersey,59,4.12,1.82,0,7
+Wicked Choccy's → New Mexico,17,3.88,1.27,2,7
+Wicked Choccy's → New York,436,3.96,1.91,0,7
+Wicked Choccy's → North Carolina,101,4.11,1.74,0,7
+Wicked Choccy's → North Dakota,2,3.5,2.12,2,5
+Wicked Choccy's → Nova Scotia,6,4.83,1.94,2,7
+Wicked Choccy's → Ohio,189,3.71,2.01,0,7
+Wicked Choccy's → Oklahoma,25,3.88,1.99,0,7
+Wicked Choccy's → Ontario,30,4.87,1.53,3,7
+Wicked Choccy's → Oregon,43,4.19,1.75,1,7
+Wicked Choccy's → Pennsylvania,227,4.08,1.89,0,7
+Wicked Choccy's → Prince Edward Island,4,5.5,1.73,4,7
+Wicked Choccy's → Quebec,24,4.5,1.41,1,7
+Wicked Choccy's → Rhode Island,21,3.33,1.35,1,7
+Wicked Choccy's → Saskatchewan,2,4.5,2.12,3,6
+Wicked Choccy's → South Carolina,19,4.26,1.91,0,7
+Wicked Choccy's → South Dakota,3,3.0,1.73,2,5
+Wicked Choccy's → Tennessee,67,4.58,1.71,1,7
+Wicked Choccy's → Texas,388,3.96,1.91,0,7
+Wicked Choccy's → Utah,23,3.74,1.68,1,7
+Wicked Choccy's → Vermont,5,5.6,0.89,5,7
+Wicked Choccy's → Virginia,106,4.08,1.82,0,7
+Wicked Choccy's → Washington,221,3.83,1.89,0,7
+Wicked Choccy's → West Virginia,2,4.0,0.0,4,4
+Wicked Choccy's → Wisconsin,47,4.57,1.91,0,7

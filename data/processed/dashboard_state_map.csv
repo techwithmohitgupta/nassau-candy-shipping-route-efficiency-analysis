@@ -1,0 +1,60 @@
+State/Province,Total_Shipments,Avg_Lead_Time,Lead_Time_Std,Bottleneck_Flag
+Alabama,61,4.18,1.88,Normal
+Alberta,26,3.77,1.61,Normal
+Arizona,224,3.9,1.96,Normal
+Arkansas,60,4.23,1.69,Normal
+British Columbia,22,4.77,1.51,Normal
+California,2001,3.95,1.88,Normal
+Colorado,182,3.74,1.87,Normal
+Connecticut,82,3.49,2.1,Normal
+Delaware,96,4.03,1.74,Normal
+District Of Columbia,10,4.2,1.55,Normal
+Florida,383,4.07,1.92,Normal
+Georgia,184,4.08,1.93,Normal
+Idaho,21,4.71,2.05,Normal
+Illinois,492,4,1.89,Normal
+Indiana,149,4.23,1.64,Normal
+Iowa,30,4.23,1.81,Normal
+Kansas,24,4.17,2.14,Normal
+Kentucky,139,4.07,1.69,Normal
+Louisiana,42,3.88,1.76,Normal
+Maine,8,4.62,1.6,Normal
+Manitoba,12,3.75,1.76,Normal
+Maryland,105,4.09,1.88,Normal
+Massachusetts,135,4.02,1.73,Normal
+Michigan,255,4.26,1.94,Bottleneck
+Minnesota,89,4.24,1.79,Normal
+Mississippi,53,4.47,1.81,Normal
+Missouri,66,3.7,1.58,Normal
+Montana,15,4.6,2.06,Normal
+Nebraska,38,3.79,1.68,Normal
+Nevada,39,3.92,1.6,Normal
+New Brunswick,8,5,1.2,Normal
+New Hampshire,27,3.93,1.41,Normal
+New Jersey,130,4.35,1.69,Normal
+New Mexico,37,4.16,1.54,Normal
+New York,1128,3.99,1.91,Normal
+Newfoundland And Labrador,6,5.67,1.63,Normal
+North Carolina,249,4.12,1.96,Normal
+North Dakota,7,4,1.73,Normal
+Nova Scotia,6,4.83,1.94,Normal
+Ohio,469,3.57,1.98,Normal
+Oklahoma,66,4.09,1.94,Normal
+Ontario,58,4.38,1.64,Normal
+Oregon,124,4.2,1.79,Normal
+Pennsylvania,587,4.11,1.82,Normal
+Prince Edward Island,10,5.4,1.43,Normal
+Quebec,50,3.86,1.58,Normal
+Rhode Island,56,3.34,1.59,Normal
+Saskatchewan,2,4.5,2.12,Normal
+South Carolina,42,3.83,1.72,Normal
+South Dakota,12,4.17,1.85,Normal
+Tennessee,183,4.28,1.65,Bottleneck
+Texas,985,4.05,1.88,Normal
+Utah,53,3.79,1.56,Normal
+Vermont,11,5,1.1,Normal
+Virginia,224,4.03,1.81,Normal
+Washington,506,3.94,1.89,Normal
+West Virginia,4,2.75,1.89,Normal
+Wisconsin,110,4.25,1.98,Normal
+Wyoming,1,3,,Normal

@@ -1,0 +1,5 @@
+Region,Total_Shipments,Avg_Lead_Time,Lead_Time_Std,Bottleneck_Flag
+Atlantic,2986,3.96,1.88,Normal
+Gulf,1620,4.11,1.84,Normal
+Interior,2335,4.08,1.86,Normal
+Pacific,3253,3.95,1.87,Normal

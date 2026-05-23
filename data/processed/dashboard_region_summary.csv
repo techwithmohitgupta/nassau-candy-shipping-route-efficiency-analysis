@@ -1,0 +1,21 @@
+Route_Region,Total_Shipments,Avg_Lead_Time,Lead_Time_Std,Min_Lead_Time,Max_Lead_Time
+Lot's O' Nuts → Atlantic,1661,3.93,1.87,0,7
+Lot's O' Nuts → Gulf,897,4.1,1.83,0,7
+Lot's O' Nuts → Interior,1321,4.09,1.82,0,7
+Lot's O' Nuts → Pacific,1813,3.92,1.87,0,7
+Secret Factory → Atlantic,72,4.04,1.81,1,7
+Secret Factory → Gulf,37,3.7,1.47,0,7
+Secret Factory → Interior,45,3.71,1.91,0,7
+Secret Factory → Pacific,63,3.57,1.99,0,7
+Sugar Shack → Atlantic,18,4.44,1.92,0,7
+Sugar Shack → Gulf,4,4.75,1.89,2,6
+Sugar Shack → Interior,8,3.62,2.26,1,7
+Sugar Shack → Pacific,3,3.33,0.58,3,4
+The Other Factory → Atlantic,38,4.08,1.95,0,7
+The Other Factory → Gulf,19,3.53,2.12,0,7
+The Other Factory → Interior,11,3.82,2.14,1,7
+The Other Factory → Pacific,32,3.66,1.89,1,7
+Wicked Choccy's → Atlantic,1197,4,1.89,0,7
+Wicked Choccy's → Gulf,663,4.16,1.86,0,7
+Wicked Choccy's → Interior,950,4.09,1.91,0,7
+Wicked Choccy's → Pacific,1342,4.02,1.86,0,7

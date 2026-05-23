@@ -1,0 +1,11 @@
+Route_State,Total_Shipments,Avg_Lead_Time,Lead_Time_Std,Min_Lead_Time,Max_Lead_Time,Efficiency_Rank
+The Other Factory → Rhode Island,1,7.0,,7,7,96.0
+The Other Factory → Missouri,1,7.0,,7,7,96.0
+The Other Factory → New Jersey,3,6.33,1.15,5,7,95.0
+Secret Factory → Maryland,3,6.0,1.0,5,7,94.0
+Secret Factory → Mississippi,1,6.0,,6,6,94.0
+Sugar Shack → Delaware,1,6.0,,6,6,94.0
+Sugar Shack → Rhode Island,1,6.0,,6,6,94.0
+Secret Factory → New Hampshire,1,6.0,,6,6,94.0
+The Other Factory → Washington,4,5.75,0.96,5,7,93.0
+Lot's O' Nuts → Newfoundland And Labrador,6,5.67,1.63,3,7,92.0

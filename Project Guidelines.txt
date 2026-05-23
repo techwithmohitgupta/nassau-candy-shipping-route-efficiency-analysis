@@ -1,0 +1,133 @@
+Factory-to-Customer Shipping Route Efficiency Analysis for Nassau Candy Distributor
+
+Detailed guide and project requirements for the Factory-to-Customer Shipping Route Efficiency Analysis for Nassau Candy Distributor analysis.
+
+Background and Context:
+Nassau Candy Distributor operates as a national distributor, shipping products from factories to customers across multiple US regions.
+In such operations:
+• Shipping efficiency directly affects customer satisfaction
+• Delays increase operational cost
+• Inefficient routes reduce scalability
+Despite having rich order and shipment data, logistics decisions are often made without route-level efficiency intelligence.
+
+Unified Mentor
+Nassau Candy Distributor
+
+Problem Statement
+The organization currently lacks clarity on:
+
+• Which factory-to-customer routes are consistently efficient
+• Which routes experience frequent delays
+• How shipping performance varies by region, state, and ship mode
+• Where operational bottlenecks exist geographically
+• Without this visibility, logistics optimization remains reactive rather than data-driven.
+Dataset Fields Description:
+Field	Description
+Row ID	Unique row identifier
+Order ID	Unique order identifier
+Order Date	Date of order
+Ship Date	Date of shipment
+Ship Mode	Shipping method of order
+Customer ID	Unique customer identifier
+Country/Region	Country or region of customer
+City	City of customer
+State/Province	State/province of customer
+Postal Code	Postal code / zip code of customer
+Division	Product division
+Region	Region of customer
+Product ID	Unique product identifier
+Product Name	Product long namer
+Sales	Total sales value of order
+Units	Total units of order
+Gross Profit	Gross profit of order ( Sales - Cost )
+Cost	Cost to manufacture
+Analytical Methodology (Step-by-Step)
+Data Cleaning & Validation
+• Validate date formats
+• Remove invalid or negative lead times
+• Handle missing shipment records
+• Standardize geographic fields
+Feature Engineering
+• Calculate Shipping Lead Time (days)
+• Categorize routes by:
+○ Factory → Customer Region
+○ Factory → Customer State
+• Group shipments by Ship Mode
+Route Definition & Aggregation
+Each route is defined as: Factory Location → Customer State / Region For each route:
+
+• Total shipments
+• Average shipping lead time
+• Lead time variability
+Efficiency Benchmarking
+• Rank routes from fastest to slowest
+• Identify:
+○ Top 10 most efficient routes
+○ Bottom 10 least efficient routes
+• Compare performance across ship modes
+Geographic Bottleneck Analysis
+• Identify regions with:
+○ High average lead time
+○ High shipment volume + poor performance
+• Detect congestion-prone states or regions
+Ship Mode Performance Analysis
+• Compare shipping efficiency by:
+○ Standard shipping
+○ Expedited shipping
+• Evaluate cost-time tradeoffs (descriptive)
+Key Performance Indicators (KPIs)
+KPI	Description
+Shipping Lead Time	Ship Date − Order Date
+Average Lead Time	Mean shipping duration per route
+Route Volume	Number of orders per route
+Delay Frequency	% of shipments exceeding threshold
+Route Efficiency Score	Normalized lead-time performance
+Streamlit Web Application Requirements
+Dashboard Modules
+• Route Efficiency Overview
+● Average lead time by route
+● Route performance leaderboard
+• Geographic Shipping Map
+● US heatmap of shipping efficiency
+● Regional bottleneck visualization
+• Ship Mode Comparison
+● Lead time comparison by shipping method
+• Route Drill-Down
+● State-level performance insights
+● Order-level shipment timelines
+User Capabilities
+• Date range filter
+• Region / State selector
+• Ship mode filter
+• Lead-time threshold slider
+Deliverables and Submission
+• Research paper (EDA, insights, recommendations)
+• Streamlit dashboard (live analytics)
+• Executive summary for government stakeholders
+Conclusion
+This project establishes a clear, data-driven understanding of shipping route efficiency for Nassau Candy Distributor. By transforming raw order and shipment data into route-level operational intelligence, the organization gains actionable insights to improve logistics performance, reduce delays, and enhance nationwide delivery reliability.
+
+Factories Co-ordinates
+Factory	Latitude	Longitude
+Lot's O' Nuts	32.881893	-111.768036
+Wicked Choccy's	32.076176	-81.088371
+Sugar Shack	48.11914	-96.18115
+Secret Factory	41.446333	-90.565487
+The Other Factory	35.1175	-89.971107
+Products and Factories Correlation
+Division	Product Name	Factory
+Chocolate	Wonka Bar - Nutty Crunch Surprise	Lot's O' Nuts
+Chocolate	Wonka Bar - Fudge Mallows	Lot's O' Nuts
+Chocolate	Wonka Bar -Scrumdiddlyumptious	Lot's O' Nuts
+Chocolate	Wonka Bar - Milk Chocolate	Wicked Choccy's
+Chocolate	Wonka Bar - Triple Dazzle Caramel	Wicked Choccy's
+Sugar	Laffy Taffy	Sugar Shack
+Sugar	SweeTARTS	Sugar Shack
+Sugar	Nerds	Sugar Shack
+Sugar	Fun Dip	Sugar Shack
+Other	Fizzy Lifting Drinks	Sugar Shack
+Sugar	Everlasting Gobstopper	Secret Factory
+Sugar	Hair Toffee	The Other Factory
+Other	Lickable Wallpaper	Secret Factory
+Other	Wonka Gum	Secret Factory
+Other	Kazookles	The Other Factory

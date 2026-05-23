@@ -1,0 +1,5 @@
+Ship Mode,Total_Shipments,Avg_Lead_Time,Lead_Time_Std,Delayed,On-Time,Efficiency_Rank
+First Class,1548,2.02,0.82,,100,2
+Same Day,547,0.5,0.5,,100,1
+Second Class,1979,3.48,1.13,,100,3
+Standard Class,6120,5,1.42,40.13071895,59.86928105,4
