@@ -12,7 +12,8 @@ from datetime import date
 # -------------------------
 st.set_page_config(
     page_title="Nassau Candy Logistics Dashboard",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="auto"
 )
 
 # -------------------------
@@ -317,6 +318,87 @@ with st.sidebar:
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
+# -------------------------
+# MOBILE FILTER PANEL
+# -------------------------
+# Mobile users may not always see Streamlit's native sidebar button.
+# This panel provides the same filters directly inside the dashboard.
+# Desktop sidebar remains unchanged.
+
+st.markdown('<div class="mobile-filter-panel-wrapper">', unsafe_allow_html=True)
+
+with st.expander("📱 Dashboard Filters", expanded=False):
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown(
+        """
+        <div class="mobile-filter-intro">
+            Quickly adjust the dashboard filters to explore shipping performance, route efficiency, regional bottlenecks, and ship mode insights.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    mobile_selected_dates = st.date_input(
+        "📅 Date Range",
+        value=(start_date, end_date),
+        min_value=min_date,
+        max_value=max_date,
+        key="mobile_date_range"
+    )
+
+    if isinstance(mobile_selected_dates, tuple) and len(mobile_selected_dates) == 2:
+        start_date, end_date = mobile_selected_dates
+    else:
+        start_date, end_date = min_date, max_date
+
+    mobile_selected_region = st.selectbox(
+        "🌍 Region",
+        options=region_options,
+        index=region_options.index(selected_region) if selected_region in region_options else 0,
+        key="mobile_region_filter"
+    )
+
+    selected_region = mobile_selected_region
+
+    if selected_region == "All Regions":
+        mobile_state_source = df_main.copy()
+    else:
+        mobile_state_source = df_main[df_main["Region"] == selected_region].copy()
+
+    mobile_state_options = ["All States"] + sorted(
+        mobile_state_source["State/Province"].dropna().unique().tolist()
+    )
+
+    mobile_selected_state = st.selectbox(
+        "📍 State",
+        options=mobile_state_options,
+        index=mobile_state_options.index(selected_state) if selected_state in mobile_state_options else 0,
+        key="mobile_state_filter"
+    )
+
+    selected_state = mobile_selected_state
+
+    mobile_selected_ship_modes = st.multiselect(
+        "🚚 Ship Mode",
+        options=ship_mode_options,
+        default=selected_ship_modes if selected_ship_modes else ship_mode_options,
+        key="mobile_ship_mode_filter"
+    )
+
+    selected_ship_modes = mobile_selected_ship_modes
+
+    mobile_lead_time_threshold = st.slider(
+        "⏱ Lead-Time Threshold",
+        min_value=1,
+        max_value=15,
+        value=lead_time_threshold,
+        key="mobile_lead_time_threshold"
+    )
+
+    lead_time_threshold = mobile_lead_time_threshold
 
 # -------------------------
 # FILTERED DATA
