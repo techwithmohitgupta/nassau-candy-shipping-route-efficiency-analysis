@@ -300,7 +300,101 @@ region_options = ["All Regions"] + sorted(df_main["Region"].dropna().unique().to
 ship_mode_options = sorted(df_main["Ship Mode"].dropna().unique().tolist())
 
 # -------------------------
-# SIDEBAR FILTERS
+# CENTRAL FILTER STATE SYSTEM
+# Initialize single source of truth for desktop + mobile filters
+# -------------------------
+
+def get_state_options_for_region(region_value: str) -> list[str]:
+    """Return valid state options based on selected region."""
+    if region_value == "All Regions":
+        state_source = df_main.copy()
+    else:
+        state_source = df_main[df_main["Region"] == region_value].copy()
+
+    return ["All States"] + sorted(
+        state_source["State/Province"].dropna().unique().tolist()
+    )
+
+
+def clamp_date_range(start_value, end_value):
+    """Keep selected dates inside dataset date range."""
+    if start_value is None or end_value is None:
+        return min_date, max_date
+
+    if start_value < min_date:
+        start_value = min_date
+
+    if end_value > max_date:
+        end_value = max_date
+
+    if start_value > end_value:
+        return min_date, max_date
+
+    return start_value, end_value
+
+
+# Default final filter state
+default_filter_state = {
+    "active_filter_source": "desktop",
+    "final_start_date": min_date,
+    "final_end_date": max_date,
+    "final_region": "All Regions",
+    "final_state": "All States",
+    "final_ship_modes": ship_mode_options.copy(),
+    "final_lead_time_threshold": 5,
+}
+
+# Initialize missing session state values only once
+for state_key, default_value in default_filter_state.items():
+    if state_key not in st.session_state:
+        st.session_state[state_key] = default_value
+
+
+# -------------------------
+# Validate existing session state after reruns / code changes
+# -------------------------
+
+# Validate date range
+final_start_date, final_end_date = clamp_date_range(
+    st.session_state.get("final_start_date", min_date),
+    st.session_state.get("final_end_date", max_date),
+)
+
+st.session_state["final_start_date"] = final_start_date
+st.session_state["final_end_date"] = final_end_date
+
+# Validate region
+if st.session_state.get("final_region") not in region_options:
+    st.session_state["final_region"] = "All Regions"
+
+# Validate state based on final region
+final_state_options = get_state_options_for_region(st.session_state["final_region"])
+
+if st.session_state.get("final_state") not in final_state_options:
+    st.session_state["final_state"] = "All States"
+
+# Validate ship modes
+current_ship_modes = st.session_state.get("final_ship_modes", ship_mode_options.copy())
+
+if not isinstance(current_ship_modes, list):
+    current_ship_modes = ship_mode_options.copy()
+
+st.session_state["final_ship_modes"] = [
+    mode for mode in current_ship_modes if mode in ship_mode_options
+]
+
+# Validate threshold
+try:
+    threshold_value = int(st.session_state.get("final_lead_time_threshold", 5))
+except Exception:
+    threshold_value = 5
+
+threshold_value = max(1, min(15, threshold_value))
+st.session_state["final_lead_time_threshold"] = threshold_value
+
+# -------------------------
+# SIDEBAR FILTERS — DESKTOP SOURCE
+# Updates central filter state for desktop sidebar
 # -------------------------
 with st.sidebar:
     if mentor_logo_path.exists():
@@ -318,145 +412,328 @@ with st.sidebar:
     <div class="sidebar-divider"></div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="filter-card"><div class="filter-card-title">📅 Date Range</div></div>', unsafe_allow_html=True)
-    selected_dates = st.date_input(
+    # -------------------------
+    # Desktop Date Range
+    # -------------------------
+    st.markdown(
+        '<div class="filter-card"><div class="filter-card-title">📅 Date Range</div></div>',
+        unsafe_allow_html=True,
+    )
+
+    desktop_default_dates = (
+        st.session_state["final_start_date"],
+        st.session_state["final_end_date"],
+    )
+
+    desktop_selected_dates = st.date_input(
         "Select period",
-        value=(min_date, max_date),
+        value=desktop_default_dates,
         min_value=min_date,
         max_value=max_date,
-        label_visibility="collapsed"
+        label_visibility="collapsed",
+        key="desktop_date_range_filter",
     )
 
-    if isinstance(selected_dates, tuple) and len(selected_dates) == 2:
-        start_date, end_date = selected_dates
+    if isinstance(desktop_selected_dates, tuple) and len(desktop_selected_dates) == 2:
+        desktop_start_date, desktop_end_date = desktop_selected_dates
     else:
-        start_date, end_date = min_date, max_date
+        desktop_start_date, desktop_end_date = min_date, max_date
 
-    st.markdown('<div class="filter-card"><div class="filter-card-title">🌍 Region / State</div></div>', unsafe_allow_html=True)
-    selected_region = st.selectbox(
+    # -------------------------
+    # Desktop Region + State
+    # -------------------------
+    st.markdown(
+        '<div class="filter-card"><div class="filter-card-title">🌍 Region / State</div></div>',
+        unsafe_allow_html=True,
+    )
+
+    desktop_region_index = (
+        region_options.index(st.session_state["final_region"])
+        if st.session_state["final_region"] in region_options
+        else 0
+    )
+
+    desktop_selected_region = st.selectbox(
         "Region",
         options=region_options,
-        label_visibility="collapsed"
+        index=desktop_region_index,
+        label_visibility="collapsed",
+        key="desktop_region_filter",
     )
 
-    if selected_region == "All Regions":
-        state_source = df_main.copy()
-    else:
-        state_source = df_main[df_main["Region"] == selected_region].copy()
+    desktop_state_options = get_state_options_for_region(desktop_selected_region)
 
-    state_options = ["All States"] + sorted(state_source["State/Province"].dropna().unique().tolist())
-    selected_state = st.selectbox(
+    current_final_state = st.session_state.get("final_state", "All States")
+    if current_final_state not in desktop_state_options:
+        current_final_state = "All States"
+
+    desktop_state_index = (
+        desktop_state_options.index(current_final_state)
+        if current_final_state in desktop_state_options
+        else 0
+    )
+
+    desktop_selected_state = st.selectbox(
         "State",
-        options=state_options,
-        label_visibility="collapsed"
+        options=desktop_state_options,
+        index=desktop_state_index,
+        label_visibility="collapsed",
+        key="desktop_state_filter",
     )
 
-    st.markdown('<div class="filter-card"><div class="filter-card-title">🚚 Ship Mode</div></div>', unsafe_allow_html=True)
-    selected_ship_modes = st.multiselect(
+    # -------------------------
+    # Desktop Ship Mode
+    # -------------------------
+    st.markdown(
+        '<div class="filter-card"><div class="filter-card-title">🚚 Ship Mode</div></div>',
+        unsafe_allow_html=True,
+    )
+
+    desktop_default_ship_modes = [
+        mode
+        for mode in st.session_state.get("final_ship_modes", ship_mode_options.copy())
+        if mode in ship_mode_options
+    ]
+
+    desktop_selected_ship_modes = st.multiselect(
         "Ship Mode",
         options=ship_mode_options,
-        default=ship_mode_options,
-        label_visibility="collapsed"
+        default=desktop_default_ship_modes,
+        label_visibility="collapsed",
+        key="desktop_ship_mode_filter",
     )
 
-    st.markdown('<div class="filter-card"><div class="filter-card-title">⏱ Lead-Time Threshold</div></div>', unsafe_allow_html=True)
-    lead_time_threshold = st.slider(
+    # -------------------------
+    # Desktop Lead-Time Threshold
+    # -------------------------
+    st.markdown(
+        '<div class="filter-card"><div class="filter-card-title">⏱ Lead-Time Threshold</div></div>',
+        unsafe_allow_html=True,
+    )
+
+    desktop_lead_time_threshold = st.slider(
         "Lead Time Threshold",
         min_value=1,
         max_value=15,
-        value=5,
-        label_visibility="collapsed"
+        value=int(st.session_state["final_lead_time_threshold"]),
+        label_visibility="collapsed",
+        key="desktop_lead_time_threshold_filter",
     )
 
-    st.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
-    st.markdown("""
-    <div class="sidebar-footer-note">
-        <div class="sidebar-subtext">
-            Filters are active • dashboard analytics connected
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    # -------------------------
+    # Update central state from desktop filters ONLY when desktop changes
+    # This prevents hidden mobile widgets from fighting with desktop state.
+    # -------------------------
+    desktop_filter_payload = {
+        "start_date": desktop_start_date,
+        "end_date": desktop_end_date,
+        "region": desktop_selected_region,
+        "state": desktop_selected_state,
+        "ship_modes": desktop_selected_ship_modes,
+        "lead_time_threshold": int(desktop_lead_time_threshold),
+    }
+
+    desktop_previous_payload = st.session_state.get("_desktop_filter_payload")
+
+    if desktop_previous_payload is None or desktop_filter_payload != desktop_previous_payload:
+        st.session_state["active_filter_source"] = "desktop"
+        st.session_state["final_start_date"] = desktop_filter_payload["start_date"]
+        st.session_state["final_end_date"] = desktop_filter_payload["end_date"]
+        st.session_state["final_region"] = desktop_filter_payload["region"]
+        st.session_state["final_state"] = desktop_filter_payload["state"]
+        st.session_state["final_ship_modes"] = desktop_filter_payload["ship_modes"]
+        st.session_state["final_lead_time_threshold"] = desktop_filter_payload["lead_time_threshold"]
+
+    st.session_state["_desktop_filter_payload"] = desktop_filter_payload
     
 # -------------------------
-# MOBILE FILTER PANEL
+# MOBILE FILTER PANEL — MOBILE SOURCE
+# Updates central filter state only when mobile filters change
 # -------------------------
-# Mobile users may not always see Streamlit's native sidebar button.
-# This panel provides the same filters directly inside the dashboard.
-# Desktop sidebar remains unchanged.
 
 st.markdown('<div class="mobile-filter-panel-wrapper">', unsafe_allow_html=True)
 
 with st.expander("📱 Dashboard Filters", expanded=False):
-    
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(
         """
         <div class="mobile-filter-intro">
-            Quickly adjust the dashboard filters to explore shipping performance, route efficiency, regional bottlenecks, and ship mode insights.
+            Quickly adjust the dashboard filters to explore shipping performance, route efficiency,
+            regional bottlenecks, and ship mode insights.
         </div>
         """,
         unsafe_allow_html=True
     )
 
+    # -------------------------
+    # Mobile Date Range
+    # -------------------------
+    mobile_default_dates = (
+        st.session_state["final_start_date"],
+        st.session_state["final_end_date"],
+    )
+
     mobile_selected_dates = st.date_input(
         "📅 Date Range",
-        value=(start_date, end_date),
+        value=mobile_default_dates,
         min_value=min_date,
         max_value=max_date,
-        key="mobile_date_range"
+        key="mobile_date_range_filter",
     )
 
     if isinstance(mobile_selected_dates, tuple) and len(mobile_selected_dates) == 2:
-        start_date, end_date = mobile_selected_dates
+        mobile_start_date, mobile_end_date = mobile_selected_dates
     else:
-        start_date, end_date = min_date, max_date
+        mobile_start_date, mobile_end_date = min_date, max_date
+
+    # -------------------------
+    # Mobile Region
+    # -------------------------
+    mobile_region_default = st.session_state.get("final_region", "All Regions")
+
+    mobile_region_index = (
+        region_options.index(mobile_region_default)
+        if mobile_region_default in region_options
+        else 0
+    )
 
     mobile_selected_region = st.selectbox(
         "🌍 Region",
         options=region_options,
-        index=region_options.index(selected_region) if selected_region in region_options else 0,
-        key="mobile_region_filter"
+        index=mobile_region_index,
+        key="mobile_region_filter",
     )
 
-    selected_region = mobile_selected_region
+    # -------------------------
+    # Mobile State based on selected mobile region
+    # -------------------------
+    mobile_state_options = get_state_options_for_region(mobile_selected_region)
 
-    if selected_region == "All Regions":
-        mobile_state_source = df_main.copy()
-    else:
-        mobile_state_source = df_main[df_main["Region"] == selected_region].copy()
+    current_mobile_state = st.session_state.get("mobile_state_filter", st.session_state.get("final_state", "All States"))
 
-    mobile_state_options = ["All States"] + sorted(
-        mobile_state_source["State/Province"].dropna().unique().tolist()
+    if current_mobile_state not in mobile_state_options:
+        current_mobile_state = "All States"
+
+    mobile_state_index = (
+        mobile_state_options.index(current_mobile_state)
+        if current_mobile_state in mobile_state_options
+        else 0
     )
 
     mobile_selected_state = st.selectbox(
         "📍 State",
         options=mobile_state_options,
-        index=mobile_state_options.index(selected_state) if selected_state in mobile_state_options else 0,
-        key="mobile_state_filter"
+        index=mobile_state_index,
+        key="mobile_state_filter",
     )
 
-    selected_state = mobile_selected_state
+    # -------------------------
+    # Mobile Ship Mode
+    # -------------------------
+    mobile_default_ship_modes = [
+        mode
+        for mode in st.session_state.get("final_ship_modes", ship_mode_options.copy())
+        if mode in ship_mode_options
+    ]
 
     mobile_selected_ship_modes = st.multiselect(
         "🚚 Ship Mode",
         options=ship_mode_options,
-        default=selected_ship_modes if selected_ship_modes else ship_mode_options,
-        key="mobile_ship_mode_filter"
+        default=mobile_default_ship_modes,
+        key="mobile_ship_mode_filter",
     )
 
-    selected_ship_modes = mobile_selected_ship_modes
-
+    # -------------------------
+    # Mobile Lead-Time Threshold
+    # -------------------------
     mobile_lead_time_threshold = st.slider(
         "⏱ Lead-Time Threshold",
         min_value=1,
         max_value=15,
-        value=lead_time_threshold,
-        key="mobile_lead_time_threshold"
+        value=int(st.session_state["final_lead_time_threshold"]),
+        key="mobile_lead_time_threshold_filter",
     )
 
-    lead_time_threshold = mobile_lead_time_threshold
+    # -------------------------
+    # Update central state from mobile filters ONLY when mobile changes
+    # This prevents hidden mobile panel from overwriting desktop filters.
+    # -------------------------
+    mobile_filter_payload = {
+        "start_date": mobile_start_date,
+        "end_date": mobile_end_date,
+        "region": mobile_selected_region,
+        "state": mobile_selected_state,
+        "ship_modes": mobile_selected_ship_modes,
+        "lead_time_threshold": int(mobile_lead_time_threshold),
+    }
+
+    mobile_previous_payload = st.session_state.get("_mobile_filter_payload")
+
+    if mobile_previous_payload is None:
+        # First render only: store payload, do not overwrite desktop state.
+        st.session_state["_mobile_filter_payload"] = mobile_filter_payload
+
+    elif mobile_filter_payload != mobile_previous_payload:
+        st.session_state["active_filter_source"] = "mobile"
+        st.session_state["final_start_date"] = mobile_filter_payload["start_date"]
+        st.session_state["final_end_date"] = mobile_filter_payload["end_date"]
+        st.session_state["final_region"] = mobile_filter_payload["region"]
+        st.session_state["final_state"] = mobile_filter_payload["state"]
+        st.session_state["final_ship_modes"] = mobile_filter_payload["ship_modes"]
+        st.session_state["final_lead_time_threshold"] = mobile_filter_payload["lead_time_threshold"]
+
+        st.session_state["_mobile_filter_payload"] = mobile_filter_payload
+
+    else:
+        st.session_state["_mobile_filter_payload"] = mobile_filter_payload
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+
+# -------------------------
+# FINAL FILTER VARIABLES
+# Single source of truth for KPI, charts, tables, and insights
+# -------------------------
+start_date = st.session_state["final_start_date"]
+end_date = st.session_state["final_end_date"]
+selected_region = st.session_state["final_region"]
+selected_state = st.session_state["final_state"]
+selected_ship_modes = st.session_state["final_ship_modes"]
+lead_time_threshold = st.session_state["final_lead_time_threshold"]
+
+# -------------------------
+# STEP 5 — FINAL FILTER STATE STABILITY GUARD
+# Prevents invalid final filter values after desktop/mobile switching
+# -------------------------
+
+# Date safety
+start_date, end_date = clamp_date_range(start_date, end_date)
+st.session_state["final_start_date"] = start_date
+st.session_state["final_end_date"] = end_date
+
+# Region safety
+if selected_region not in region_options:
+    selected_region = "All Regions"
+    st.session_state["final_region"] = selected_region
+
+# State safety based on selected region
+valid_state_options = get_state_options_for_region(selected_region)
+
+if selected_state not in valid_state_options:
+    selected_state = "All States"
+    st.session_state["final_state"] = selected_state
+
+# Ship mode safety
+selected_ship_modes = [
+    mode for mode in selected_ship_modes if mode in ship_mode_options
+]
+
+st.session_state["final_ship_modes"] = selected_ship_modes
+
+# Threshold safety
+lead_time_threshold = int(lead_time_threshold)
+lead_time_threshold = max(1, min(15, lead_time_threshold))
+st.session_state["final_lead_time_threshold"] = lead_time_threshold
 
 # -------------------------
 # FILTERED DATA
