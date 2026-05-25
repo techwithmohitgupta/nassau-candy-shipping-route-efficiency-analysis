@@ -128,6 +128,64 @@ def render_panel_item(title: str, text: str, kind: str = "insight"):
         <div class="{text_class}">{text}</div>
     </div>
     """, unsafe_allow_html=True)
+    
+# -------------------------
+# PLOTLY MOBILE-SAFE CONFIG
+# -------------------------
+PLOTLY_CONFIG = {
+    "displayModeBar": False,
+    "responsive": True,
+    "scrollZoom": False
+}
+
+def apply_mobile_chart_style(fig, height=380):
+    """Apply consistent mobile-friendly Plotly styling without changing chart logic."""
+    fig.update_layout(
+        height=height,
+        font=dict(
+            family="Arial, sans-serif",
+            size=12,
+            color="#2f281c"
+        ),
+        margin=dict(l=10, r=10, t=28, b=35),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(255,255,255,0.58)",
+        hoverlabel=dict(
+            bgcolor="#fffdf8",
+            bordercolor="rgba(184,149,91,0.28)",
+            font=dict(color="#2f281c", size=12)
+        ),
+        legend=dict(
+            font=dict(size=11, color="#2f281c"),
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="left",
+            x=0
+        )
+    )
+
+    fig.update_xaxes(
+        tickfont=dict(size=10, color="#3b2f1b"),
+        title_font=dict(size=11, color="#3b2f1b"),
+        gridcolor="rgba(91,70,48,0.08)",
+        zerolinecolor="rgba(91,70,48,0.12)"
+    )
+
+    fig.update_yaxes(
+        tickfont=dict(size=10, color="#3b2f1b"),
+        title_font=dict(size=11, color="#3b2f1b"),
+        gridcolor="rgba(91,70,48,0.08)",
+        zerolinecolor="rgba(91,70,48,0.12)"
+    )
+
+    return fig
+
+
+def show_chart(fig, height=380):
+    """Render Plotly chart with mobile-safe config."""
+    fig = apply_mobile_chart_style(fig, height=height)
+    st.plotly_chart(fig, use_container_width=True, config=PLOTLY_CONFIG)
 
 
 def load_css(css_path: Path):
@@ -795,7 +853,7 @@ with tab1:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_route, use_container_width=True)
+            st.plotly_chart(fig_route, use_container_width=True, config=PLOTLY_CONFIG)
 
             scatter_df = route_stats.copy()
             fig_scatter = px.scatter(
@@ -819,7 +877,7 @@ with tab1:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_scatter, use_container_width=True)
+            st.plotly_chart(fig_scatter, use_container_width=True, config=PLOTLY_CONFIG)
 
             st.markdown("""
             <div class="insight-box">
@@ -905,7 +963,7 @@ with tab1:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_top_routes, use_container_width=True)
+            st.plotly_chart(fig_top_routes, use_container_width=True, config=PLOTLY_CONFIG)
 
         with chart_right:
             st.markdown("**⚠️ Bottom 10 Least Efficient Routes**")
@@ -928,7 +986,7 @@ with tab1:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_bottom_routes, use_container_width=True)
+            st.plotly_chart(fig_bottom_routes, use_container_width=True, config=PLOTLY_CONFIG)
 
         with st.expander("View detailed route tables"):
             st.markdown("**Top 10 Efficient Routes — Table**")
@@ -1010,7 +1068,7 @@ with tab2:
                     margin=dict(l=10, r=10, t=10, b=10),
                     paper_bgcolor="rgba(0,0,0,0)"
                 )
-                st.plotly_chart(fig_map, use_container_width=True)
+                st.plotly_chart(fig_map, use_container_width=True, config=PLOTLY_CONFIG)
 
         st.markdown("</div>", unsafe_allow_html=True)
 
@@ -1045,7 +1103,7 @@ with tab2:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_region, use_container_width=True)
+            st.plotly_chart(fig_region, use_container_width=True, config=PLOTLY_CONFIG)
 
             st.info("⚠ Bottlenecks are identified based on high shipment volume and high average lead time (top 25% threshold).")
 
@@ -1099,7 +1157,7 @@ with tab3:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_ship, use_container_width=True)
+            st.plotly_chart(fig_ship, use_container_width=True, config=PLOTLY_CONFIG)
 
             st.info("ℹ Delay % is calculated based on lead-time threshold. Ship modes with average lead time below threshold may show 0% delay.")
 
@@ -1160,7 +1218,7 @@ with tab3:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_delay, use_container_width=True)
+            st.plotly_chart(fig_delay, use_container_width=True, config=PLOTLY_CONFIG)
 
             best_mode = ship_stats.sort_values("Avg_Lead_Time", ascending=True).iloc[0]
             worst_mode = ship_stats.sort_values("Avg_Lead_Time", ascending=False).iloc[0]
@@ -1252,7 +1310,7 @@ with tab4:
                     legend_title_text="Shipment Status"
                 )
 
-                st.plotly_chart(fig_timeline, use_container_width=True)
+                st.plotly_chart(fig_timeline, use_container_width=True, config=PLOTLY_CONFIG)
 
                 st.markdown("### Order-Level Shipment Records")
                 display_cols = [
@@ -1629,7 +1687,7 @@ with tab5:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_trend, use_container_width=True)
+            st.plotly_chart(fig_trend, use_container_width=True, config=PLOTLY_CONFIG)
 
             st.markdown("</div>", unsafe_allow_html=True)
 
@@ -1659,7 +1717,7 @@ with tab5:
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(255,255,255,0.3)"
             )
-            st.plotly_chart(fig_orders, use_container_width=True)
+            st.plotly_chart(fig_orders, use_container_width=True, config=PLOTLY_CONFIG)
 
             st.markdown("</div>", unsafe_allow_html=True)
 
