@@ -1617,3 +1617,513 @@ section[data-testid="stSidebar"] .stSlider [data-testid="stTickBar"] {
         margin-bottom: 5rem !important;
     }
 }
+
+/* =========================================================
+   DEPLOYED MOBILE TOP SPACING + FILTER PANEL PREMIUM FIX
+   Safe-mode: mobile-only top section polish
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Reduce extra top blank gap on deployed Streamlit mobile */
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-top: 0.85rem !important;
+    }
+
+    /* Mobile filter wrapper spacing */
+    .mobile-filter-panel-wrapper {
+        margin-top: 0 !important;
+        margin-bottom: 0.85rem !important;
+        padding: 0 !important;
+    }
+
+    /* Mobile filter expander outer shell */
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] {
+        margin-top: 0 !important;
+        margin-bottom: 0.85rem !important;
+        border-radius: 20px !important;
+        border: 1px solid rgba(184, 149, 91, 0.24) !important;
+        background: linear-gradient(135deg, #fff8e8 0%, #efd27f 100%) !important;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.13) !important;
+        overflow: hidden !important;
+    }
+
+    /* Mobile filter clickable header */
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary {
+        min-height: 56px !important;
+        padding: 0.95rem 1.05rem !important;
+        border-radius: 19px !important;
+        background:
+            radial-gradient(circle at top left, rgba(255,255,255,0.55), rgba(255,255,255,0) 42%),
+            linear-gradient(135deg, #fff4d6 0%, #e6c25f 100%) !important;
+        color: #2f281c !important;
+        font-size: 16px !important;
+        font-weight: 950 !important;
+        letter-spacing: -0.15px !important;
+        box-shadow: inset 0 -1px 0 rgba(91, 70, 48, 0.12) !important;
+        transition: all 0.25s ease !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 10px 22px rgba(184, 149, 91, 0.18) !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary p {
+        color: #2f281c !important;
+        font-size: 16px !important;
+        font-weight: 950 !important;
+        margin: 0 !important;
+        line-height: 1.25 !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary svg {
+        color: #3b2f1b !important;
+        fill: #3b2f1b !important;
+        stroke: #3b2f1b !important;
+    }
+
+    /* Filter open content */
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] details > div {
+        padding: 1rem 0.95rem 1.05rem 0.95rem !important;
+        background: rgba(255, 255, 255, 0.56) !important;
+    }
+
+    /* Hero should start closer after filter panel */
+    .header-shell {
+        margin-top: 0.15rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Hero card slightly more premium on mobile */
+    .hero-card {
+        border-radius: 22px !important;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.13) !important;
+        border: 1px solid rgba(184, 149, 91, 0.20) !important;
+    }
+
+    /* Small improvement for top hero spacing */
+    .hero-logo {
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+    }
+}
+
+/* =========================================================
+   FINAL MOBILE TOP HERO + FILTER PREMIUM UPGRADE
+   Strong override for deployed Streamlit mobile spacing
+   Desktop untouched
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Remove Streamlit top blank space aggressively */
+    .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stMain"],
+    [data-testid="stMainBlockContainer"],
+    section[data-testid="stMain"],
+    section.main {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-top: 0.35rem !important;
+        padding-left: 0.7rem !important;
+        padding-right: 0.7rem !important;
+        margin-top: 0 !important;
+    }
+
+    /* Remove first element extra Streamlit spacing */
+    [data-testid="stVerticalBlock"] > div:first-child,
+    [data-testid="stElementContainer"]:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Mobile filter wrapper - premium top placement */
+    .mobile-filter-panel-wrapper {
+        margin-top: 0 !important;
+        margin-bottom: 0.65rem !important;
+        padding: 0 !important;
+        position: relative !important;
+        z-index: 20 !important;
+    }
+
+    /* Filter panel as premium action bar */
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] {
+        margin: 0 0 0.65rem 0 !important;
+        border-radius: 22px !important;
+        border: 1px solid rgba(184, 149, 91, 0.34) !important;
+        background:
+            radial-gradient(circle at top left, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 42%),
+            linear-gradient(135deg, #fff4d5 0%, #e9c76c 45%, #d8ad4f 100%) !important;
+        box-shadow:
+            0 14px 30px rgba(91, 70, 48, 0.18),
+            inset 0 1px 0 rgba(255,255,255,0.55) !important;
+        overflow: hidden !important;
+    }
+
+    /* Clickable dashboard filter header */
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary {
+        min-height: 58px !important;
+        padding: 1rem 1.15rem !important;
+        border-radius: 22px !important;
+        background:
+            linear-gradient(135deg, rgba(255,255,255,0.52) 0%, rgba(255,255,255,0.12) 42%, rgba(120,85,30,0.05) 100%),
+            linear-gradient(135deg, #fff7df 0%, #eac667 100%) !important;
+        color: #2f281c !important;
+        font-size: 16px !important;
+        font-weight: 950 !important;
+        letter-spacing: -0.2px !important;
+        box-shadow:
+            inset 0 -1px 0 rgba(91,70,48,0.14),
+            0 8px 18px rgba(184,149,91,0.14) !important;
+        cursor: pointer !important;
+        transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary:active {
+        transform: scale(0.985) !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary p {
+        color: #2f281c !important;
+        font-size: 16px !important;
+        font-weight: 950 !important;
+        line-height: 1.25 !important;
+        margin: 0 !important;
+        text-transform: none !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary svg {
+        color: #3b2f1b !important;
+        fill: #3b2f1b !important;
+        stroke: #3b2f1b !important;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12)) !important;
+    }
+
+    /* Open filter content */
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] details > div {
+        padding: 1rem 0.95rem 1.05rem 0.95rem !important;
+        background:
+            linear-gradient(180deg, rgba(255,255,255,0.74) 0%, rgba(255,250,236,0.62) 100%) !important;
+    }
+
+    /* Compact professional intro */
+    .mobile-filter-intro {
+        background: rgba(255, 255, 255, 0.72) !important;
+        border: 1px solid rgba(184,149,91,0.18) !important;
+        border-left: 4px solid #d4aa4a !important;
+        border-radius: 14px !important;
+        color: #5b4630 !important;
+        font-size: 12.3px !important;
+        font-weight: 700 !important;
+        line-height: 1.55 !important;
+        padding: 0.75rem 0.85rem !important;
+        margin-bottom: 0.85rem !important;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.04) !important;
+    }
+
+    /* Hero starts closer */
+    .header-shell {
+        margin-top: 0 !important;
+        margin-bottom: 0.85rem !important;
+    }
+
+    /* Hero premium upgrade */
+    .hero-card {
+        margin-top: 0 !important;
+        border-radius: 24px !important;
+        padding-top: 18px !important;
+        background:
+            radial-gradient(circle at top left, rgba(255,255,255,0.50) 0%, rgba(255,255,255,0) 42%),
+            linear-gradient(135deg, #f9edca 0%, #e8c56e 100%) !important;
+        border: 1px solid rgba(184,149,91,0.28) !important;
+        box-shadow:
+            0 16px 34px rgba(91,70,48,0.16),
+            inset 0 1px 0 rgba(255,255,255,0.45) !important;
+    }
+
+    .hero-logo {
+        width: min(100%, 240px) !important;
+        height: 76px !important;
+        margin-bottom: 12px !important;
+        background-color: rgba(255,255,255,0.46) !important;
+        box-shadow: 0 7px 16px rgba(91,70,48,0.09) !important;
+    }
+
+    .hero-title {
+        color: #2f3140 !important;
+        font-size: clamp(22px, 6.7vw, 28px) !important;
+        line-height: 1.25 !important;
+        font-weight: 950 !important;
+        letter-spacing: -0.35px !important;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.35) !important;
+    }
+
+    .hero-subtitle {
+        color: #4f412d !important;
+        font-size: 12.7px !important;
+        font-weight: 650 !important;
+        line-height: 1.6 !important;
+        margin-top: 11px !important;
+    }
+
+    .hero-badge {
+        background: rgba(255,255,255,0.48) !important;
+        border: 1px solid rgba(255,255,255,0.56) !important;
+        box-shadow: 0 5px 12px rgba(91,70,48,0.08) !important;
+        color: #3b2f1b !important;
+        font-weight: 800 !important;
+    }
+
+    /* Reduce extra space before KPI heading */
+    .dashboard-section-heading {
+        margin-top: 0.85rem !important;
+    }
+}
+
+/* =========================================================
+   FINAL MOBILE TOP COMPACT PREMIUM OVERRIDE
+   Fixes deployed/local mobile top blank gap aggressively
+   Desktop untouched
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Streamlit mobile wrapper top spacing reset */
+    .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stMain"],
+    [data-testid="stMainBlockContainer"],
+    .block-container {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .block-container {
+        padding-left: 0.7rem !important;
+        padding-right: 0.7rem !important;
+        padding-bottom: 8rem !important;
+    }
+
+    /* Reduce Streamlit vertical block gaps */
+    [data-testid="stVerticalBlock"] {
+        gap: 0.45rem !important;
+    }
+
+    [data-testid="stElementContainer"] {
+        margin-top: 0 !important;
+        margin-bottom: 0.45rem !important;
+    }
+
+    /* Mobile filter panel compact position */
+    div[data-testid="stExpander"]:first-of-type {
+        margin-top: 0.15rem !important;
+        margin-bottom: 0.35rem !important;
+        border-radius: 22px !important;
+        border: 1px solid rgba(184, 149, 91, 0.30) !important;
+        background:
+            radial-gradient(circle at top left, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 42%),
+            linear-gradient(135deg, #fff4d8 0%, #e6c25f 100%) !important;
+        box-shadow:
+            0 14px 28px rgba(91, 70, 48, 0.16),
+            inset 0 1px 0 rgba(255,255,255,0.55) !important;
+        overflow: hidden !important;
+    }
+
+    div[data-testid="stExpander"]:first-of-type summary {
+        min-height: 54px !important;
+        padding: 0.9rem 1.05rem !important;
+        border-radius: 21px !important;
+        background:
+            linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.12) 48%),
+            linear-gradient(135deg, #fff6dc 0%, #e8c465 100%) !important;
+        color: #2f281c !important;
+        font-size: 15.5px !important;
+        font-weight: 950 !important;
+        letter-spacing: -0.15px !important;
+        box-shadow: inset 0 -1px 0 rgba(91,70,48,0.12) !important;
+    }
+
+    div[data-testid="stExpander"]:first-of-type summary p {
+        color: #2f281c !important;
+        font-size: 15.5px !important;
+        font-weight: 950 !important;
+        margin: 0 !important;
+    }
+
+    div[data-testid="stExpander"]:first-of-type summary svg {
+        color: #3b2f1b !important;
+        fill: #3b2f1b !important;
+        stroke: #3b2f1b !important;
+    }
+
+    /* Most important fix: pull hero upward after mobile filter */
+    .header-shell {
+        margin-top: -2.6rem !important;
+        margin-bottom: 0.85rem !important;
+    }
+
+    /* If spacing is still large, hero card itself also moves visually up */
+    .hero-card {
+        margin-top: 0 !important;
+        border-radius: 24px !important;
+        padding: 17px 13px 19px 13px !important;
+        background:
+            radial-gradient(circle at top left, rgba(255,255,255,0.52) 0%, rgba(255,255,255,0) 42%),
+            linear-gradient(135deg, #f9edca 0%, #e8c56e 100%) !important;
+        border: 1px solid rgba(184,149,91,0.28) !important;
+        box-shadow:
+            0 16px 34px rgba(91,70,48,0.16),
+            inset 0 1px 0 rgba(255,255,255,0.45) !important;
+    }
+
+    .hero-logo {
+        width: min(100%, 240px) !important;
+        height: 76px !important;
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+        background-color: rgba(255,255,255,0.46) !important;
+        box-shadow: 0 7px 16px rgba(91,70,48,0.09) !important;
+    }
+
+    .hero-title {
+        color: #2f3140 !important;
+        font-size: clamp(22px, 6.7vw, 28px) !important;
+        line-height: 1.25 !important;
+        font-weight: 950 !important;
+        letter-spacing: -0.35px !important;
+    }
+
+    .hero-subtitle {
+        color: #4f412d !important;
+        font-size: 12.7px !important;
+        font-weight: 650 !important;
+        line-height: 1.6 !important;
+        margin-top: 10px !important;
+    }
+
+    .hero-badges {
+        margin-top: 12px !important;
+        gap: 7px !important;
+    }
+
+    .hero-badge {
+        background: rgba(255,255,255,0.50) !important;
+        border: 1px solid rgba(255,255,255,0.58) !important;
+        box-shadow: 0 5px 12px rgba(91,70,48,0.08) !important;
+        color: #3b2f1b !important;
+        font-weight: 850 !important;
+    }
+
+    /* KPI heading closer to hero */
+    .dashboard-section-heading {
+        margin-top: 0.7rem !important;
+    }
+}
+
+/* =========================================================
+   MOBILE TOP OVERLAP FIX
+   Fixes hero overlapping with Dashboard Filters
+   Desktop untouched
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Keep top compact but prevent overlap */
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-top: 0.45rem !important;
+    }
+
+    /* Dashboard Filters panel spacing */
+    .mobile-filter-panel-wrapper {
+        margin-top: 0 !important;
+        margin-bottom: 0.95rem !important;
+        padding: 0 !important;
+        position: relative !important;
+        z-index: 30 !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] {
+        margin-top: 0 !important;
+        margin-bottom: 0.95rem !important;
+        border-radius: 22px !important;
+        box-shadow:
+            0 14px 28px rgba(91, 70, 48, 0.16),
+            inset 0 1px 0 rgba(255,255,255,0.55) !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] summary {
+        min-height: 56px !important;
+        padding: 0.95rem 1.1rem !important;
+        border-radius: 22px !important;
+    }
+
+    /* IMPORTANT: remove aggressive negative pull */
+    .header-shell {
+        margin-top: 0.55rem !important;
+        margin-bottom: 0.95rem !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    /* Hero premium but safe */
+    .hero-card {
+        margin-top: 0 !important;
+        border-radius: 24px !important;
+        box-shadow:
+            0 16px 34px rgba(91,70,48,0.15),
+            inset 0 1px 0 rgba(255,255,255,0.42) !important;
+    }
+
+    /* Reduce internal hero height slightly */
+    .hero-logo {
+        height: 74px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-title {
+        font-size: clamp(22px, 6.6vw, 28px) !important;
+        line-height: 1.24 !important;
+    }
+
+    .hero-subtitle {
+        margin-top: 9px !important;
+        line-height: 1.55 !important;
+    }
+
+    .hero-badges {
+        margin-top: 11px !important;
+    }
+}
+
+/* =========================================================
+   MOBILE TOP FINAL MICRO POLISH
+   Safe: tiny spacing improvement only
+========================================================= */
+
+@media (max-width: 600px) {
+    .mobile-filter-panel-wrapper {
+        margin-bottom: 0.45rem !important;
+    }
+
+    .mobile-filter-panel-wrapper div[data-testid="stExpander"] {
+        margin-bottom: 0.45rem !important;
+    }
+
+    .header-shell {
+        margin-top: 0.25rem !important;
+        margin-bottom: 0.85rem !important;
+    }
+
+    .hero-card {
+        padding-top: 16px !important;
+        padding-bottom: 18px !important;
+    }
+}
