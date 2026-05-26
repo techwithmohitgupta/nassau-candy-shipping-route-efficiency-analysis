@@ -12,7 +12,7 @@ from datetime import date
 # -------------------------
 st.set_page_config(
     page_title="Nassau Candy Logistics Dashboard",
-    icon="🚚",
+    page_icon="🚚",
     layout="wide",
     initial_sidebar_state="auto"
 )
