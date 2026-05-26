@@ -1,240 +1,258 @@
+<div align="center">
+
 # 🚚 Factory-to-Customer Shipping Route Efficiency Analysis
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+### Interactive Streamlit Logistics Dashboard for Nassau Candy Distributor
+
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&duration=2500&pause=800&color=9C7B37&center=true&vCenter=true&width=1000&lines=Factory-to-Customer+Shipping+Route+Efficiency+Analysis;Route+Performance+%7C+Lead+Time+%7C+Regional+Bottlenecks+%7C+Ship+Mode+Insights;Interactive+Streamlit+Dashboard+for+Logistics+Decision-Making;Turning+Shipping+Data+into+Actionable+Business+Insights" alt="Typing SVG" />
+
+<br>
+
+![Python](https://img.shields.io/badge/Python-Data%20Analytics-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Interactive%20Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Visuals-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-Project%20Repository-181717?style=for-the-badge&logo=github&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-KPI%20Calculations-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
----
+<br>
 
-## 📌 Project Overview
+![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)
+![Streamlit Cloud](https://img.shields.io/badge/Deployed%20on-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Status](https://img.shields.io/badge/Project%20Status-Live%20Dashboard-2EA043?style=for-the-badge)
+![Domain](https://img.shields.io/badge/Domain-Logistics%20%26%20Supply%20Chain%20Analytics-0969DA?style=for-the-badge)
 
-This project analyzes **factory-to-customer shipping route efficiency** for **Nassau Candy Distributor** using a Streamlit-based interactive analytics dashboard.
-
-The main goal of this project is to identify shipping delays, route bottlenecks, state-level delivery performance issues, and opportunities to improve logistics efficiency.
-
-The dashboard helps business users understand:
-
-- Which routes are performing efficiently  
-- Which states or regions are creating delivery bottlenecks  
-- Which ship modes are causing higher lead times  
-- Where shipment delays are more frequent  
-- How route performance changes across different filters and views  
-
----
-
-## 🎯 Business Problem
-
-Nassau Candy Distributor needs better visibility into its shipping operations.
-
-Without a proper analytics dashboard, it becomes difficult to track delayed shipments, compare route performance, identify inefficient delivery paths, and understand state-level logistics issues.
-
-This project solves that problem by building an interactive dashboard that converts shipment data into decision-ready insights.
-
----
-
-## 🧠 Business Questions Answered
-
-This project answers key logistics questions such as:
-
-- What is the average shipping lead time across routes?
-- Which routes have the highest delay frequency?
-- Which states show consistent shipping bottlenecks?
-- Which ship modes are faster or slower?
-- Which routes need operational attention?
-- How do shipping KPIs change based on filters?
-- What are the top delay-risk routes?
-
----
-
-## 📊 Key Metrics / KPIs
-
-The dashboard tracks the following important logistics KPIs:
-
-| KPI | Meaning |
-|---|---|
-| 🚚 Total Shipments | Total number of shipment records analyzed |
-| ⏱️ Average Lead Time | Average time taken from order date to ship date |
-| ⚠️ Delay Frequency | Percentage of delayed shipments based on delay threshold |
-| 📦 Route Volume | Number of shipments handled by each route |
-| 📍 Route Efficiency Score | Route-level performance score based on lead time and delay behavior |
-| 🗺️ State-Level Performance | Shipping performance across different states |
-| 🚛 Ship Mode Performance | Comparison of shipping modes based on delivery efficiency |
-
----
-
-## 🛠️ Tools & Technologies Used
-
-### Programming & Data Analysis
-
-![Python](https://img.shields.io/badge/Python-Data%20Analytics-3776AB?style=flat-square&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Analysis-013243?style=flat-square&logo=numpy&logoColor=white)
-
-### Dashboard & Visualization
-
-![Streamlit](https://img.shields.io/badge/Streamlit-Web%20Dashboard-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Visuals-3F4F75?style=flat-square&logo=plotly&logoColor=white)
-
-### Development & Deployment
-
-![VS Code](https://img.shields.io/badge/VS%20Code-Code%20Editor-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)
-![Streamlit Cloud](https://img.shields.io/badge/Streamlit%20Cloud-App%20Deployment-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+</div>
 
 ---
 
 ## 🚀 Live Dashboard
 
-🔗 **Live Streamlit App:**  
-[Factory-to-Customer Shipping Route Efficiency Analysis](https://factory-to-customer-shipping-route-efficiency-analysis.streamlit.app/)
+<div align="center">
+
+### 🔗 [Open Live Streamlit App](https://factory-to-customer-shipping-route-efficiency-analysis.streamlit.app/)
+
+<a href="https://factory-to-customer-shipping-route-efficiency-analysis.streamlit.app/">
+  <img src="https://img.shields.io/badge/Launch%20Dashboard-Streamlit%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+</a>
+
+</div>
 
 ---
 
-## 📂 Project Repository
+## 📌 Project Overview
 
-🔗 **GitHub Repository:**  
-[https://github.com/techwithmohitgupta/nassau-candy-shipping-route-efficiency-analysis](https://github.com/techwithmohitgupta/nassau-candy-shipping-route-efficiency-analysis)
+This project is an interactive **Factory-to-Customer Shipping Route Efficiency Analysis Dashboard** built for **Nassau Candy Distributor**.
 
----
+The dashboard analyzes shipping lead time, route-level performance, regional bottlenecks, state-level delivery issues, ship mode efficiency, and shipment trends across factory-to-customer delivery routes.
 
-## 📈 Dashboard Modules
+It is designed to help logistics and supply chain teams answer critical operational questions:
 
-The Streamlit dashboard includes the following analytical modules:
-
-### 1. 🚚 Route Efficiency Overview
-
-This section provides a high-level overview of shipping route performance.
-
-It includes:
-
-- Average lead time by route  
-- Route volume analysis  
-- Route performance leaderboard  
-- Delay frequency comparison  
-- Route efficiency score  
+- Which routes are taking the longest time to ship?
+- Which regions or states are creating delivery bottlenecks?
+- Which ship modes are performing better or worse?
+- Which routes have high shipment volume but poor lead-time performance?
+- How does lead time change over time?
+- Which routes need priority operational attention?
 
 ---
 
-### 2. 🗺️ Geographic Shipping Analysis
+## 🎯 Business Problem
 
-This section focuses on state-level and regional shipping performance.
+Nassau Candy Distributor needs better visibility into shipping route performance.
 
-It helps identify:
+Without a centralized analytics dashboard, it becomes difficult to monitor:
 
-- States with higher shipping delays  
-- Regional bottlenecks  
-- State-wise lead time performance  
-- Shipping efficiency across locations  
+- Shipping lead time
+- Route efficiency
+- Delayed shipments
+- Regional bottlenecks
+- Ship mode performance
+- State-level delivery issues
+- Route-level operational risk
 
----
-
-### 3. 🚛 Ship Mode Comparison
-
-This section compares different shipping modes based on performance.
-
-It helps understand:
-
-- Which ship modes are faster  
-- Which ship modes have higher delay risk  
-- How delivery performance varies by shipping method  
-- Which shipping methods need improvement  
+This project solves that problem by converting shipment data into a dynamic Streamlit dashboard with KPIs, charts, maps, drill-down views, insights, and recommendations.
 
 ---
 
-### 4. 🔍 Route Drill-Down Analysis
+## 🧠 Key Business Questions Answered
 
-This section allows deeper analysis of route-level shipment behavior.
-
-It includes:
-
-- State-level performance insights  
-- Route-level shipment timelines  
-- Detailed shipment records  
-- Delay-risk identification  
-
----
-
-## 📊 Dashboard Features
-
-- Interactive Streamlit dashboard  
-- Dynamic sidebar filters  
-- Route-level KPI tracking  
-- State-level performance analysis  
-- Ship mode comparison  
-- Delay frequency monitoring  
-- Interactive Plotly charts  
-- Clean and business-friendly UI  
-- Data-driven insights and recommendations  
-- Deployed using Streamlit Cloud  
-
----
-
-## 🔎 Data Analysis Workflow
-
-The project follows a structured data analytics workflow:
-
-| Step | Description |
+| Business Question | Dashboard Area |
 |---|---|
-| 1️⃣ Data Loading | Imported raw shipment data for analysis |
-| 2️⃣ Data Cleaning | Handled missing values, duplicates, data types, and date columns |
-| 3️⃣ Feature Engineering | Created lead time, delay flags, route metrics, and efficiency indicators |
-| 4️⃣ KPI Creation | Built logistics KPIs such as lead time, delay frequency, and route score |
-| 5️⃣ Dashboard Preparation | Prepared dashboard-ready datasets |
-| 6️⃣ Visualization | Built interactive Plotly charts and Streamlit UI |
-| 7️⃣ Deployment | Deployed the dashboard on Streamlit Cloud |
+| What is the overall shipping lead time? | KPI Section |
+| Which routes are slowest or fastest? | Route Overview |
+| Which states are delivery bottlenecks? | Geographic View |
+| Which ship mode performs best? | Ship Mode Analysis |
+| Which routes have high delay risk? | Route Leaderboard & Drill-Down |
+| How is lead time changing month by month? | Trends Tab |
+| Which shipment areas need action? | Insights & Recommendations |
 
 ---
 
-## 🧩 Key Insights
+## 📊 Dashboard Preview
 
-Some major insights from the analysis include:
+> Add final dashboard screenshots here after deployment.
 
-- Certain routes show higher average lead time and need operational attention.
-- Delay frequency varies across states and ship modes.
-- Route volume and delay frequency together help identify high-risk shipping paths.
-- State-level analysis helps highlight regional bottlenecks.
-- Ship mode comparison helps evaluate delivery method efficiency.
-- Route efficiency scoring provides a clear way to rank logistics performance.
+Suggested screenshots:
 
----
-
-## ✅ Business Impact
-
-This project can help logistics and operations teams:
-
-- Reduce shipping delays  
-- Identify inefficient routes  
-- Improve delivery planning  
-- Monitor route-level performance  
-- Compare shipping methods  
-- Support data-driven logistics decisions  
-- Prioritize high-risk routes for improvement  
+| Section | Screenshot |
+|---|---|
+| Executive Header & KPI Cards | Add screenshot |
+| Route Efficiency Overview | Add screenshot |
+| Geographic Shipping Map | Add screenshot |
+| Ship Mode Analysis | Add screenshot |
+| Route Drill-Down Panel | Add screenshot |
+| Shipping Trends Tab | Add screenshot |
 
 ---
 
-## 📌 Skills Demonstrated
+## 🧩 Dashboard Modules
 
-This project demonstrates practical skills in:
-
-- Data cleaning  
-- Exploratory data analysis  
-- Feature engineering  
-- KPI development  
-- Logistics analytics  
-- Business intelligence  
-- Dashboard development  
-- Data storytelling  
-- Streamlit app deployment  
-- Git and GitHub version control  
+The dashboard is divided into five major analytical modules.
 
 ---
 
-## 🖥️ How to Run This Project Locally
+### 1️⃣ Route Overview
 
-### 1. Clone the repository
+This module analyzes route-level shipping efficiency and lead-time performance.
 
-```bash
-git clone https://github.com/techwithmohitgupta/nassau-candy-shipping-route-efficiency-analysis.git
+**Key Features**
+
+- Average lead time by route
+- Route volume comparison
+- Route efficiency score
+- Top 10 efficient routes
+- Bottom 10 least efficient routes
+- Route performance leaderboard
+- Route volume vs lead-time scatter view
+- Dynamic insight and recommendation panel
+
+**Business Value**
+
+This section helps identify which factory-to-customer routes are efficient and which routes require operational improvement.
+
+---
+
+### 2️⃣ Geographic View
+
+This module focuses on geographic shipping performance.
+
+**Key Features**
+
+- U.S. state-level shipping heatmap
+- State-level average lead time
+- Regional bottleneck summary
+- State-level delay frequency
+- Bottleneck flag based on high volume and high lead time
+
+**Business Value**
+
+This section helps logistics teams identify regions and states where shipping delays are concentrated.
+
+---
+
+### 3️⃣ Ship Mode Analysis
+
+This module compares shipping performance across different ship modes.
+
+**Key Features**
+
+- Ship mode lead-time comparison
+- Delay vs on-time percentage
+- Best shipping mode
+- Slowest shipping mode
+- Ship mode efficiency ranking
+- Threshold-based delay calculation
+
+**Business Value**
+
+This section helps evaluate which shipping methods are reliable and which modes may need operational review.
+
+---
+
+### 4️⃣ Route Drill-Down
+
+This module allows detailed route-level investigation.
+
+**Key Features**
+
+- Select any route for deeper analysis
+- Order-level shipment timeline
+- On-time vs delayed shipment status
+- Route factory details
+- Destination state and region
+- Factory coordinates
+- Route-level delay frequency
+- Analyst recommendation for selected route
+
+**Business Value**
+
+This section helps business users move from high-level route performance to shipment-level details.
+
+---
+
+### 5️⃣ Trends
+
+This module analyzes monthly shipping trends.
+
+**Key Features**
+
+- Monthly average lead-time trend
+- Monthly shipment volume trend
+- Latest month KPI snapshot
+- Highest lead-time month
+- Best lead-time month
+- Peak shipment volume month
+- Trend-based insights
+- Analyst recommendations
+
+**Business Value**
+
+This section helps identify whether shipping performance is improving, declining, or facing seasonal pressure.
+
+---
+
+## 🎛️ Dynamic Filters
+
+Every KPI, chart, table, insight, and recommendation updates dynamically based on the selected filters.
+
+| Filter | Purpose |
+|---|---|
+| 📅 Date Range | Analyze shipping performance within a selected period |
+| 🌍 Region | Filter performance by region |
+| 📍 State | Drill into state-level shipping performance |
+| 🚚 Ship Mode | Compare selected shipping methods |
+| ⏱ Lead-Time Threshold | Define delayed shipments based on selected threshold |
+
+---
+
+## 📈 Key Performance Indicators
+
+The dashboard includes a primary KPI section and supporting metrics.
+
+| KPI | Meaning |
+|---|---|
+| ⏱ Shipping Lead Time | Median shipment duration |
+| 📊 Average Lead Time | Mean shipment duration |
+| 📦 Route Volume | Average shipments handled per route |
+| ⚠ Delay Frequency | Percentage of shipments above selected lead-time threshold |
+| 🚀 Route Efficiency Score | Normalized route performance score |
+| Total Shipments | Total shipment records in the selected view |
+| Unique Orders | Number of unique customer orders |
+| Avg Shipments / Order | Average shipment records per order |
+
+---
+
+## 🧮 KPI Logic
+
+```text
+Shipping Lead Time = Ship Date - Order Date
+
+Average Lead Time = Mean of Shipping Lead Time
+
+Delay Frequency = Delayed Shipments / Total Shipments × 100
+
+Route Volume = Number of shipments handled by each route
+
+Route Efficiency Score = Normalized lead-time performance score
+
+Avg Shipments per Order = Total Shipments / Unique Orders
