@@ -88,23 +88,6 @@ This project solves that problem by converting shipment data into a dynamic Stre
 
 ---
 
-## 📊 Dashboard Preview
-
-> Add final dashboard screenshots here after deployment.
-
-Suggested screenshots:
-
-| Section | Screenshot |
-|---|---|
-| Executive Header & KPI Cards | Add screenshot |
-| Route Efficiency Overview | Add screenshot |
-| Geographic Shipping Map | Add screenshot |
-| Ship Mode Analysis | Add screenshot |
-| Route Drill-Down Panel | Add screenshot |
-| Shipping Trends Tab | Add screenshot |
-
----
-
 ## 🧩 Dashboard Modules
 
 The dashboard is divided into five major analytical modules.
