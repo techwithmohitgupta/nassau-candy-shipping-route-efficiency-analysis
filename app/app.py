@@ -1040,11 +1040,19 @@ elif delay_frequency_kpi > 20:
 else:
     kpi_msg = "✅ Current logistics performance looks healthy for the selected filters."
 
-st.markdown(f"""
-<div class="summary-banner">
-    <strong>Performance Summary:</strong> {kpi_msg}
-</div>
-""", unsafe_allow_html=True)
+st.markdown(
+    f"""
+    <div class="summary-card">
+        <div class="summary-card-label">Performance Summary</div>
+        <div class="summary-card-text">{kpi_msg}</div>
+        <div class="summary-card-note">
+            <strong>Route Efficiency Score:</strong> Calculated from normalized average lead time. 
+            Faster routes get higher scores, while slower routes get lower scores.
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # -------------------------
 # SECTION CHIPS
@@ -1077,11 +1085,14 @@ if filtered_df.empty:
 if not route_stats.empty:
     top_insight = route_stats.sort_values("Avg_Lead_Time", ascending=False).iloc[0]
 
-    st.markdown(f"""
-    <div class="summary-banner">
-        <strong>Critical Insight:</strong> {top_insight['Route_State']} is the slowest route in the current selection with {top_insight['Avg_Lead_Time']:.2f} days average lead time.
+st.markdown(f"""
+<div class="critical-card">
+    <div class="critical-card-label">Critical Insight</div>
+    <div class="critical-card-text">
+        {top_insight['Route_State']} is the slowest route in the current selection with {top_insight['Avg_Lead_Time']:.2f} days average lead time.
     </div>
-    """, unsafe_allow_html=True)
+</div>
+""", unsafe_allow_html=True)
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "Route Overview",
