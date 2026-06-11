@@ -1,11 +1,12 @@
+from pathlib import Path
+from datetime import date
+
+import base64
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from pathlib import Path
-import base64
-from datetime import date
 
 # -------------------------
 # PAGE CONFIG
@@ -2036,7 +2037,8 @@ c1, c2, c3 = st.columns(3)
 with c1:
     st.markdown(
         """
-**👨‍💻 Developed by:** Mohit Gupta  
+**👨‍💻 Developed by:** Mohit Gupta
+  
 **🎯 Role:** Data Analyst Intern
         """
     )
@@ -2044,7 +2046,8 @@ with c1:
 with c2:
     st.markdown(
         """
-**📊 Project:** Nassau Candy Logistics Dashboard  
+**📊 Project:** Nassau Candy Logistics Dashboard
+  
 **🏢 Organization:** Unified Mentor Pvt. Ltd.
         """
     )
@@ -2052,7 +2055,8 @@ with c2:
 with c3:
     st.markdown(
         """
-**👨‍🏫 Mentor:** Saiprasad Kagne  
+**👨‍🏫 Mentor:** Saiprasad Kagne
+  
 **📅 Year:** 2026
         """
     )
