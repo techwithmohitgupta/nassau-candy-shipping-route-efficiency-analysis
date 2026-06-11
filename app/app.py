@@ -2046,7 +2046,7 @@ with c1:
 with c2:
     st.markdown(
         """
-**📊 Project:** Nassau Candy Logistics Dashboard
+**📊 Project:** Factory-to-Customer Shipping Route Efficiency Analysis for Nassau Candy Distributor
   
 **🏢 Organization:** Unified Mentor Pvt. Ltd.
         """
