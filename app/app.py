@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 # PAGE CONFIG
 # -------------------------
 st.set_page_config(
-    page_title="Nassau Candy Logistics Dashboard",
+    page_title="Nassau Candy Factory-to-Customer Shipping Route Efficiency Analysis",
     page_icon="🚚",
     layout="wide",
     initial_sidebar_state="auto"
